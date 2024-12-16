@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React, {Suspense, useEffect, useState} from 'react';
 import {Routes, Route} from 'react-router-dom';
 
 import Navbar from './MAIN_COMPONENTS/Navbar';
@@ -16,32 +16,47 @@ const FilmShoot = React.lazy (() =>
 
 import Footer from './MAIN_COMPONENTS/Footer.jsx';
 
-import ModalWithCarousel
-  from './MAIN_COMPONENTS/Landing-page-components/Test.jsx';
+// import ModalWithCarousel
+//   from './MAIN_COMPONENTS/Landing-page-components/Test.jsx';
 
+import Loader from './MAIN_COMPONENTS/Loader.jsx';
+import ScrollToTop from './MAIN_COMPONENTS/ScrollToTop.jsx';
 const App = () => {
+  const [isContentLoaded, setIsContentLoaded] = useState (false);
+  useEffect (() => {
+    const images = Array.from (document.images);
+    const promises = images.map (img => {
+      return new Promise (resolve => {
+        if (img.complete) {
+          resolve ();
+        } else {
+          img.onload = resolve;
+          img.onerror = resolve;
+        }
+      });
+    });
+    Promise.all (promises).then (() => setIsContentLoaded (true));
+  }, []);
   return (
     <main>
-      <Suspense
-        fallback={
-          <div className="flex justify-center items-center w-screen h-screen">
-            <div className="loader" />
-          </div>
-        }
-      >
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          {/* <Route path='/test' element={<ModalWithCarousel />} /> */}
-          <Route path="/still-shoot" element={<StillShoot />} />
-          <Route path="/film-shoot" element={<FilmShoot />} />
-        </Routes>
-        <Footer />
-      </Suspense>
+
+      <ScrollToTop />
+      {isContentLoaded
+        ? <Suspense fallback={<Loader />}>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/contact" element={<Contact />} />
+              {/* <Route path='/test' element={<ModalWithCarousel />} /> */}
+              <Route path="/still-shoot" element={<StillShoot />} />
+              <Route path="/film-shoot" element={<FilmShoot />} />
+            </Routes>
+            <Footer />
+          </Suspense>
+        : <Loader />};
 
     </main>
   );
