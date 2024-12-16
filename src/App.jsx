@@ -38,7 +38,7 @@ const App = () => {
     Promise.all (promises).then (() => setIsContentLoaded (true));
   }, []);
   return (
-    <main>
+    <main className='bg-black'>
 
       <ScrollToTop />
       {isContentLoaded
