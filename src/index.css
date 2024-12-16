@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --swiper-navigation-size: 21px !important;
+}
+
+.bg-scroll-img {
+  background-image: url('./Images/LandingPage-Images/Scrolling-Image.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: scroll;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 2px black;
+}
+
+
+.slider-container {
+  position: relative;
+  /* margin-left: 4rem;
+  margin-right: 4rem; */
+}
+
+/* The wrapper for the sliding content */
+.slider-content {
+  display: flex;
+  animation: slide 5s linear infinite;
+  /* Animate the images */
+}
+
+/* Each image item */
+.slider-item {
+  flex: 0 0 auto;
+}
+
+/* Keyframes for sliding the images */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+    /* Starts at the initial position */
+  }
+
+  100% {
+    transform: translateX(-100%);
+    /* Moves images to the left */
+  }
+}
+
+/* Class to pause the animation when hovering */
+.pause {
+  animation-play-state: paused;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg-Img {
+  background-image: url('https://www.laxya.net/images/free3.jpg');
+  width: 100%;
+  height: 100%;
+  background-position: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.divImg img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.flexx {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  /* Position the text on top of the image */
+  z-index: 3;
+  /* Text starts behind the image */
+  margin-left: 10px;
+  /* Space between image and text */
+  opacity: 0;
+  /* Initially, make the text invisible */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* Smooth transition for opacity and movement */
+  transform: translateX(-100%);
+  background: #6a6b6b;
+  width: 97vw;
+  left: -10px;
+}
+
+.flex:hover img {
+  z-index: 2;
+}
+
+.flexx:hover .slide-connector {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.flex2 {
+  display: flex
+}
+
+.b {
+  position: absolute;
+  left: -106% !important;
+}
+
+.c {
+  position: absolute;
+  left: -212% !important;
+}
+
+.d {
+  position: absolute;
+  left: -312% !important;
+}
+
+.e {
+  position: absolute;
+  left: -412% !important;
+}
+
+.f {
+  position: absolute;
+  left: -512% !important;
+}
+
+@media (max-width:767px) {
+  .b {
+    position: absolute;
+    left: -10% !important;
+  }
+
+  .c {
+    position: absolute;
+    left: -10% !important;
+  }
+
+  .d {
+    position: absolute;
+    left: -10% !important;
+  }
+
+  .e {
+    position: absolute;
+    left: -10% !important;
+  }
+
+  .f {
+    position: absolute;
+    left: -10% !important;
+  }
+}
+
+
+.loadingChild {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateX(0%);
+  }
+}
+
+.loader {
+  width: 120px;
+  height: 60px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  width: 40px;
+  border-radius: 50%;
+  background: #e1b924;
+  animation: l3 1s infinite alternate;
+}
+
+.loader:after {
+  --s: -1;
+}
+
+@keyframes l3 {
+
+  90%,
+  100% {
+    transform: translate(calc(var(--s, 1)*30px))
+  }
+}
