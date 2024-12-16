@@ -35,8 +35,8 @@ export default function Blog () {
     },
   ];
   return (
-    <div>
-      <div className="w-full">
+    <div className="bg-white">
+      <div className="bg-white w-full">
         <img src={blogHeader} alt="" className="w-full object-cover" />
       </div>
       <div className="px-3 pt-20 pb-6">

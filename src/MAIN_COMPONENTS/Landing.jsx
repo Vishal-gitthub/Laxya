@@ -41,7 +41,7 @@ const Landing = () => {
         <ExperienceCarousel />
       </div>
       {/* img scroll section */}
-      <section className="py-52">
+      <section className="bg-white py-52">
         <div className="relative">
           <div className="flex max-sm:flex justify-between max-md:hidden w-full">
             <div />
@@ -144,20 +144,23 @@ const Landing = () => {
       </section>
 
       {/* Our Studios */}
-      <section className="mx-[75px] max-sm:mx-[20px] max-md:mx-[40px]">
-        <div className="mb-[90px] text-black_custom text-center max-sm:text-left">
-          <h1 className="font-yeseva text-[54px] max-sm:text-[34px]">
-            Our Studios
-          </h1>
-          <p className="mx-28 max-sm:mx-3 max-md:mx-14 font-medium font-roboto text-[#c0c5d7] text-lg">
-            Whether you're in search of a film production house in Delhi or corporate video makers in Delhi, our studios offer the perfect setting to bring your creative vision to life.
-          </p>
-        </div>
-        <div className="flex flex-wrap justify-center items-center gap-8 mb-28 select-Bone">
-          <AqubeStudio />
-          <FillMeStudio />
-          <LaxyaA />
-          <LaxyaB />
+      <section className="bg-white">
+
+        <div className="mx-[75px] max-sm:mx-[20px] max-md:mx-[40px]">
+          <div className="mb-[90px] text-black_custom text-center max-sm:text-left">
+            <h1 className="font-yeseva text-[54px] max-sm:text-[34px]">
+              Our Studios
+            </h1>
+            <p className="mx-28 max-sm:mx-3 max-md:mx-14 font-medium font-roboto text-[#c0c5d7] text-lg">
+              Whether you're in search of a film production house in Delhi or corporate video makers in Delhi, our studios offer the perfect setting to bring your creative vision to life.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-8 pb-28 select-Bone">
+            <AqubeStudio />
+            <FillMeStudio />
+            <LaxyaA />
+            <LaxyaB />
+          </div>
         </div>
       </section>
       {/* About Us  */}

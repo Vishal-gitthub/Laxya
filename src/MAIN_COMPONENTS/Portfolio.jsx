@@ -10,7 +10,7 @@ export default function Portfolio () {
   ];
 
   return (
-    <div>
+    <div className="bg-white">
       <div className="mb-[100px] w-full">
         <img src={portfolioHeader} alt="" className="w-full object-cover" />
       </div>

@@ -5,7 +5,7 @@ import TeamSlider from './About-page-components/TeamSlider';
 export default function About() {
 
       return (
-            <div className="h-auto">
+            <div className="bg-white h-auto">
                   {/* Header Image  */}
                   <div className="w-full h-full max-md:h-[55%]">
                         <img src={aboutHeader} className="w-full object-cover" alt="" />

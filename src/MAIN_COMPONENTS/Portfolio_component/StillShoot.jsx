@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Suspense} from 'react';
 import adidas from '../../Images/portfolio_image/stillShoots/adidas.webp';
 import appoloTyres
   from '../../Images/portfolio_image/stillShoots/appoloTyres.webp';
@@ -40,6 +40,7 @@ import Voltas from '../../Images/portfolio_image/stillShoots/voltas.webp';
 import Yamaha from '../../Images/portfolio_image/stillShoots/yamaha.webp';
 import WhiteHat from '../../Images/portfolio_image/stillShoots/whiteHat.webp';
 import portfolioHeader from '../../Images/portfolio_image/Portfolio.jpg';
+import Loader from '../Loader';
 
 const stillShoot = [
   {image: adidas, text: 'Adidas'},
@@ -77,32 +78,35 @@ const stillShoot = [
 export default function StillShoot () {
   return (
     <section className="bg-white">
-      <div className="mb-[100px] w-full">
-        <img src={portfolioHeader} alt="" className="w-full object-cover" />
-      </div>
-      <div className="flex flex-wrap justify-center items-center gap-5 px-[75px] max-sm:px-3 py-5">
-        {stillShoot.map ((data, index) => (
-          <div
-            key={index}
-            className="bg-[#ececec] mx-4 p-[7px] w-full sm:w-[300px] lg:w-[45%] h-[400px] overflow-hiden group loadingChild"
-          >
-            <div className="group-hover:scale-95 w-full h-full transition-all duration-500">
-              <div
-                className="w-full h-[83.2%]"
-                style={{
-                  backgroundImage: `url(${data.image})`,
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                }}
-              />
-              <div className="bg-yellow p-4 font-roboto font-semibold text-[#222222] text-[22px] text-left">
-                <h1>{data.text}</h1>
+      <Suspense fallback={<Loader />}>
+
+        <div className="mb-[100px] w-full">
+          <img src={portfolioHeader} alt="" className="w-full object-cover" />
+        </div>
+        <div className="flex flex-wrap justify-center items-center gap-5 px-[75px] max-sm:px-3 py-5">
+          {stillShoot.map ((data, index) => (
+            <div
+              key={index}
+              className="bg-[#ececec] mx-4 p-[7px] w-full sm:w-[300px] lg:w-[45%] h-[400px] overflow-hiden group loadingChild"
+            >
+              <div className="group-hover:scale-95 w-full h-full transition-all duration-500">
+                <div
+                  className="w-full h-[83.2%]"
+                  style={{
+                    backgroundImage: `url(${data.image})`,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                  }}
+                />
+                <div className="bg-yellow p-4 font-roboto font-semibold text-[#222222] text-[22px] text-left">
+                  <h1>{data.text}</h1>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </Suspense>
     </section>
   );
 }

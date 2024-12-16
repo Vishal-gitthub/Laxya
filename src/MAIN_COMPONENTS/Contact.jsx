@@ -2,7 +2,7 @@ import React from 'react'
 import ContactHeader from "../Images/Contact_image/Lets Connect.jpg"
 export default function Contact() {
       return (
-            <div className='font-roboto'>
+            <div className='bg-white font-roboto'>
                   <div className='w-full'>
                         <img src={ContactHeader} className='w-full object-cover' alt="" />
                   </div>

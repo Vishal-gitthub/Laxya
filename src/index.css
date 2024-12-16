@@ -19,7 +19,6 @@
   -webkit-text-stroke: 2px black;
 }
 
-
 .slider-container {
   position: relative;
   /* margin-left: 4rem;
@@ -55,7 +54,6 @@
 .pause {
   animation-play-state: paused;
 }
-
 
 .swiper {
   width: 100%;
@@ -130,7 +128,7 @@
 }
 
 .flex2 {
-  display: flex
+  display: flex;
 }
 
 .b {
@@ -158,7 +156,7 @@
   left: -512% !important;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .b {
     position: absolute;
     left: -10% !important;
@@ -184,7 +182,6 @@
     left: -10% !important;
   }
 }
-
 
 .loadingChild {
   animation: appear linear;
@@ -213,12 +210,12 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  background: #fff;
+  background: transparent;
 }
 
 .loader:before,
 .loader:after {
-  content: "";
+  content: '';
   width: 40px;
   border-radius: 50%;
   background: #e1b924;
@@ -230,9 +227,8 @@
 }
 
 @keyframes l3 {
-
   90%,
   100% {
-    transform: translate(calc(var(--s, 1)*30px))
+    transform: translate(calc(var(--s, 1) * 30px));
   }
 }
