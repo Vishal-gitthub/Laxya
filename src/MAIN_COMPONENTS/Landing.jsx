@@ -43,7 +43,7 @@ const Landing = () => {
         <ExperienceCarousel />
       </div>
 
-      <section className="w-full h-screen max-sm:h-[60vh] max-md:h-[70vh]">
+      <section className="w-full h-[80vh] max-sm:h-[60vh] max-md:h-[70vh]">
         <Sliding_1st />
       </section>
 
