@@ -3,6 +3,7 @@ import portfolioHeader from '../Images/portfolio_image/Portfolio.jpg';
 import filmShoot from '../Images/LandingPage-Images/filmShoot.webp';
 import stillShoot from '../Images/LandingPage-Images/stillShoot.webp';
 import {Link} from 'react-router-dom';
+import Project from './Landing-page-components/Project';
 export default function Portfolio () {
   const portfolioImages = [
     {image: stillShoot, name: 'Still Shoots', to: '/still-shoot'},
@@ -48,8 +49,8 @@ export default function Portfolio () {
             ))}
           </div>
         </div>
-
       </section>
+      <Project />
     </div>
   );
 }
