@@ -41,7 +41,7 @@ export default function AboutUsSection () {
           </div>
         </div>
         {/* Text Section */}
-        <div className="relative top-52 max-sm:top-3 max-md:top-2 z-10 mt-20 max-md:mt-0 text-left">
+        <div className="relative top-52 max-sm:top-3 max-md:top-2 z-10 mt-20 max-md:mt-0 pl-4 text-left">
           <h1 className="font-yeseva text-[75px] max-md:text-5xl leading-snug">
             <span className="text-black">Creativity</span>
 

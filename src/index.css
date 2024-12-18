@@ -7,6 +7,27 @@
   --swiper-navigation-size: 21px !important;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  transition: 0.4s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ebc32a;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #ccccccbe;
+}
+
+
 /* Animate background image position */
 .bg-animate {
   background-position: right 30px bottom 20px;
@@ -34,39 +55,41 @@
   -webkit-text-stroke: 2px black;
 }
 
+
+/* brands Slider for landing page */
 .slider-container {
   position: relative;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
 }
 
-/* The wrapper for the sliding content */
 .slider-content {
   display: flex;
-  animation: slide 5s linear infinite;
-  /* Animate the images */
+  gap: 20px;
+  align-items: center;
+  animation: scroll 20s linear infinite;
 }
 
-/* Each image item */
-.slider-item {
-  flex: 0 0 auto;
+.slider-container:hover .slider-content {
+  animation-play-state: paused;
 }
 
-/* Keyframes for sliding the images */
-@keyframes slide {
+@keyframes scroll {
   0% {
     transform: translateX(0);
-    /* Starts at the initial position */
   }
 
   100% {
-    transform: translateX(-100%);
-    /* Moves images to the left */
+    transform: translateX(-50%);
   }
 }
 
-/* Class to pause the animation when hovering */
-.pause {
-  animation-play-state: paused;
-}
+
+/* --------------------brands logo slider animation ends ------------------- */
+
+
+
 
 .swiper {
   width: 100%;
@@ -122,7 +145,7 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateX(-100%);
   background: #6a6b6b;
-  width: 97vw;
+  width: 98vw;
   left: -10px;
 }
 

@@ -48,14 +48,14 @@ const Landing = () => {
       </section>
 
       {/* Services Section  */}
-      <section className="bg-[#f9f9f9] px-[75px] max-sm:px-3 py-10">
+      <section className="bg-[#f9f9f9] mx-auto px-[133.5px] max-sm:px-3 py-10">
         <div>
           <h1 className="font-yeseva text-[#222222] text-[152px] max-sm:text-[52px] max-md:text-[100px]">
             serv<span className="text-stroke text-transparent">ices</span>
           </h1>
         </div>
         <Link to="/contact">
-          <div className="flex flex-wrap justify-center items-center gap-6">
+          <div className="place-items-center gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {ServicesImage.map ((service, index) => (
               <div
                 key={index}

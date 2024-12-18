@@ -15,9 +15,7 @@ export default {
       colors:{
        yellow:"#ebc32a"
       },
-      // colors:{
-      // black_custom:"#222222"
-      // },
+
     },
   },
   plugins: [],

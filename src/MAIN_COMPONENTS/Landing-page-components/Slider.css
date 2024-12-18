@@ -3,6 +3,7 @@
   width: 100%;
 }
 
+
 .swiper-slide {
   background-size: cover;
   background-position: center;
@@ -74,7 +75,7 @@
 }
 
 @media (max-width: 468px) {
-  
+
   .swiper-pagination-fraction,
   .swiper-pagination-custom,
   .swiper-horizontal>.swiper-pagination-bullets,

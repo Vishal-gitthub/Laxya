@@ -65,7 +65,7 @@ export default function Blog () {
                   <span className="font-medium text-slate-900">
                     {data.type}
                   </span>
-                  <h1 className="text-xl">{data.title}</h1>
+                  <h1 className="font-bold text-xl">{data.title}</h1>
                   <span>{data.brandName}</span>
                 </div>
               </a>
@@ -74,7 +74,7 @@ export default function Blog () {
         </div>
 
       </div>
-      <div className="px-3 pt-20 pb-6">
+      <div className="px-3 pt-10 pb-6">
         <h1 className="py-3 font-medium font-roboto text-xl">Trending</h1>
         <hr className="border-2 border-black" />
         <div className="flex flex-wrap justify-center gap-4 pt-10">
@@ -95,7 +95,7 @@ export default function Blog () {
                   <span className="font-medium text-slate-900">
                     {data.type}
                   </span>
-                  <h1 className="text-xl">{data.title}</h1>
+                  <h1 className="font-bold text-xl">{data.title}</h1>
                   <span>{data.brandName}</span>
                 </div>
               </a>

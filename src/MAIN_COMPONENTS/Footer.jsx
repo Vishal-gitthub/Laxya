@@ -16,15 +16,21 @@ export default function Footer () {
           Plot No. 1, Khasra No – 620-620, Zero Road, CBR Chowk, Ghitorni, New Delhi -110030
         </p>
         <div className="flex justify-center items-center gap-4 pt-[30px] pb-[10px] text-[15px]">
-          <span className="text-[#8b9199]">+91 9810004008 </span>
-          <span className="text-[#8b919996]">|</span>
-          <span className="text-[#8b9199]"> info@laxya.net</span>
+          <span className="text-[#8b9199]">
+            <a href="tel:+919810004008">+91 9810004008</a>
+          </span>
+          <span className="text-[#8b919996]"> | </span>
+          <span className="text-[#8b9199]">
+            <a href="mailto:info@laxya.net?subject=Hello&body=I want to connect.">
+              info@laxya.net
+            </a>
+          </span>
         </div>
         <div className="flex justify-center items-center gap-4 mt-[30px]">
           <a
             href="https://www.facebook.com/laxyaproductions/"
             className="border-[#c0c0c75b] hover:border-yellow border w-[38px] h-[38px] group"
-            target='_blank'
+            target="_blank"
           >
             <i className="group-hover:text-yellow pt-[10px] text-white fa-brands fa-facebook-f" />
           </a>
