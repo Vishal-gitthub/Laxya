@@ -1,73 +1,54 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
+import {Link, NavLink} from 'react-router-dom';
 import laxyaLogo from '../Images/Logos/Laxya-Logo.webp';
 import hamburger from '../Images/Navbar_Icons/list-icon.svg';
 import cross from '../Images/Navbar_Icons/close-icon.svg';
-import {Link, NavLink} from 'react-router-dom';
+
 const Navbar = () => {
   const [visible, setVisible] = useState (false);
-  const toggleMenu = () => {
-    setVisible (!visible);
-  };
 
+  const links = [
+    {name: 'HOME', path: '/'},
+    {name: 'ABOUT', path: '/about'},
+    {name: 'PORTFOLIO', path: '/portfolio'},
+    {name: 'BLOGS', path: '/blog'},
+    {name: 'CAREERS', path: '/career'},
+    {name: 'CONTACT', path: '/contact'},
+  ];
+
+  const toggleMenu = () => setVisible (!visible);
 
   return (
-    <header className="top-0 bottom-[100px] z-50 sticky">
-      <nav className="flex justify-between items-center bg-white px-10">
-        {/* Laxya Logo */}
-        <div className="p-[5.625px] w-[206.17px]">
-          <img src={laxyaLogo} alt="Laxya Logo" />
+    <header className="top-0 z-50 sticky bg-white shadow-md">
+      <nav className="flex justify-between items-center mx-auto px-4 py-3 container">
+        {/* Logo */}
+        <div className="w-auto">
+          <img
+            src={laxyaLogo}
+            alt="Laxya Logo"
+            className="w-auto max-w-[150px]"
+          />
         </div>
 
-        {/* Laxya Navigations */}
-        <div className="block max-md:hidden">
-          <div className="flex font-roboto text-[15px]">
+        {/* Desktop Links */}
+        <div className="md:flex space-x-6 hidden text-sm">
+          {links.map (link => (
             <NavLink
-              to="/"
+              key={link.name}
+              to={link.path}
               className={({isActive}) =>
-                `${isActive ? 'text-yellow scale-105' : 'text-black scale-100'} px-[18px] py-[9px]`}
+                isActive ? 'text-yellow scale-110' : 'text-black scale-100'}
             >
-              HOME
+              {link.name}
             </NavLink>
-            <NavLink
-              to="/about"
-              className={({isActive}) =>
-                `${isActive ? 'text-yellow  scale-105' : 'text-black  scale-100'} px-[18px] py-[9px]`}
-            >
-              ABOUT
-            </NavLink>
-            <NavLink
-              to="/portfolio"
-              className={({isActive}) =>
-                `${isActive ? 'text-yellow scale-105' : 'text-black scale-100'} px-[18px] py-[9px]`}
-            >
-              PORTFOLIO
-            </NavLink>
-            <NavLink
-              to="/blog"
-              className={({isActive}) =>
-                `${isActive ? 'text-yellow scale-105' : 'text-black scale-100'} px-[18px] py-[9px]`}
-            >
-              BLOGS
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({isActive}) =>
-                `${isActive ? 'text-yellow scale-105' : 'text-black scale-100'} px-[18px] py-[9px]`}
-            >
-              CONTACT
-            </NavLink>
-
-          </div>
+          ))}
         </div>
 
-        {/* Hamburger/Cross Button */}
+        {/* Hamburger Menu */}
         <button
           onClick={toggleMenu}
-          className="max-md:block hidden px-[12px] py-[10px] border rounded transform transition-transform duration-300 hover:scale-110"
+          className="flex justify-center items-center md:hidden p-2 border rounded"
           aria-expanded={visible}
-          aria-label={
-            visible ? 'Close Navigation Menu' : 'Open Navigation Menu'
-          }
         >
           <img
             src={visible ? cross : hamburger}
@@ -76,16 +57,39 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {/* SideNavbar */}
+      {/* Mobile Menu */}
       <div
-        className={`${visible ? 'translate-y-0' : '-translate-y-full'} fixed transition-all duration-300 -z-50 bg-white`}
+        className={`fixed inset-0 bg-white transition-all duration-300 md:hidden z-40 ${visible ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-full opacity-0 pointer-events-none'}`}
       >
-        <div className="flex flex-col px-4 w-screen text-[15px]">
-          <Link to="/" className="px-0 py-[9px]">HOME</Link>
-          <Link to="/about" className="px-0 py-[9px]">ABOUT</Link>
-          <Link to="/portfolio" className="px-0 py-[9px]">PORTFOLIO</Link>
-          <Link to="/blogs" className="px-0 py-[9px]">BLOGS</Link>
-          <Link to="/contact" className="px-0 py-[9px]">CONTACT</Link>
+        <div className="flex justify-between items-center px-4 py-3 border-b">
+          {/* Logo */}
+          <img
+            src={laxyaLogo}
+            alt="Laxya Logo"
+            className="w-auto max-w-[120px]"
+          />
+
+          {/* Close Button */}
+          <button
+            onClick={toggleMenu}
+            className="p-2 border rounded"
+            aria-label="Close Navigation Menu"
+          >
+            <img src={cross} alt="Close Menu" />
+          </button>
+        </div>
+
+        <div className="flex flex-col items-start space-y-4 p-6 text-lg">
+          {links.map (link => (
+            <Link
+              key={link.name}
+              to={link.path}
+              onClick={() => setVisible (false)}
+              className="w-full text-black hover:text-yellow"
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
       </div>
     </header>

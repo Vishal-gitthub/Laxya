@@ -21,6 +21,8 @@ import Footer from './MAIN_COMPONENTS/Footer.jsx';
 
 import Loader from './MAIN_COMPONENTS/Loader.jsx';
 import ScrollToTop from './MAIN_COMPONENTS/ScrollToTop.jsx';
+import CardModalWithCarousel from './MAIN_COMPONENTS/Test.jsx';
+import TalentRegistration from './MAIN_COMPONENTS/TalentRegistration.jsx';
 const App = () => {
   const [isContentLoaded, setIsContentLoaded] = useState (false);
   useEffect (() => {
@@ -38,7 +40,7 @@ const App = () => {
     Promise.all (promises).then (() => setIsContentLoaded (true));
   }, []);
   return (
-    <main className='bg-black'>
+    <main className="bg-black">
 
       <ScrollToTop />
       {isContentLoaded
@@ -49,10 +51,12 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/career" element={<TalentRegistration />} />
               <Route path="/contact" element={<Contact />} />
               {/* <Route path='/test' element={<ModalWithCarousel />} /> */}
               <Route path="/still-shoot" element={<StillShoot />} />
               <Route path="/film-shoot" element={<FilmShoot />} />
+              <Route path="/card" element={<CardModalWithCarousel />} />
             </Routes>
             <Footer />
           </Suspense>

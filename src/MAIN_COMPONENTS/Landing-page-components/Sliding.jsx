@@ -21,13 +21,13 @@ export default function AboutUsSection() {
       }, []);
 
       return (
-            <section className="bg-[#f9f9f9] w-full pb-48">
-                  <div className="mx-[75px] max-sm:mx-[20px] max-md:mx-[40px] relative">
+            <section className="bg-[#f9f9f9] pb-48 w-full">
+                  <div className="relative mx-[75px] max-sm:mx-[20px] max-md:mx-[40px]">
                         {/* Heading Section */}
-                        <div className="z-10 relative top-4 pt-28">
+                        <div className="relative top-4 z-10 pt-28">
                               <span className="font-black text-[25px] text-yellow">laxya</span>
-                              <h1 className="text-yellow mb-10 text-[152px] max-md:text-[100px] leading-none max-sm:text-[52px] font-yeseva">
-                                    <span className="text-transparent text-stroke">about</span> us
+                              <h1 className="mb-10 font-yeseva text-[152px] text-yellow max-sm:text-[52px] max-md:text-[100px] leading-none">
+                                    <span className="text-stroke text-transparent">about</span> us
                               </h1>
                         </div>
 
@@ -35,7 +35,7 @@ export default function AboutUsSection() {
                         <div className="relative bg-[#f9f9f9]">
                               <div
                                     ref={imgContainerRef}
-                                    className="w-[700px] h-[680px] absolute max-md:static max-md:w-full max-md:h-auto top-[20px] -left-80 "
+                                    className="top-[20px] -left-80 max-md:static absolute w-[700px] max-md:w-full h-[680px] max-md:h-auto"
                               >
                                     <img
                                           src="https://www.laxya.net/images/free3.jpg"
@@ -46,7 +46,7 @@ export default function AboutUsSection() {
                         </div>
 
                         {/* Content Section */}
-                        <div className="w-full text-left font-medium text-lg font-roboto text-[#C0C0C7] bg-[#f9f9f9] pt-10 flex justify-end items-end flex-col ">
+                        <div className="flex flex-col justify-end items-end bg-[#f9f9f9] pt-10 w-full font-medium font-roboto text-[#C0C0C7] text-left text-lg">
                               <div className="w-[50%] max-md:w-full">
 
                                     <p className="pb-6">

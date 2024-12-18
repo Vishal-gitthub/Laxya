@@ -20,6 +20,7 @@ import Sliding from './Landing-page-components/Sliding';
 import ExperienceCarousel
   from '../MAIN_COMPONENTS/Landing-page-components/FrontSlider';
 import {Link} from 'react-router-dom';
+import Sliding_1st from './Landing-page-components/Sliding_1st';
 const Landing = () => {
   const ServicesImage = [
     {Image1: production, name: 'Production'},
@@ -36,28 +37,13 @@ const Landing = () => {
     {image: filmShoot, name: 'Film Shoots', redirection: '/portfolio'},
   ];
   return (
-    <div>
+    <div className="bg-white">
       <div>
         <ExperienceCarousel />
       </div>
-      {/* img scroll section */}
-      <section className="bg-white py-52">
-        <div className="relative">
-          <div className="flex max-sm:flex justify-between max-md:hidden w-full">
-            <div />
-            <div className="w-3/4 max-sm:w-screen h-[80vh] max-sm:h-[45vh]">
-              <div className="bg-scroll-img w-full h-full" />
-            </div>
-          </div>
-          <div className="-bottom-12 left-28 max-md:static absolute font-yeseva">
-            <h1 className="text-[75px] text-black max-sm:text-[50px] max-md:text-[100px] leading-[4.4rem] max-sm:leading-[2.7rem] max-md:leading-[4.7rem]">
-              Creativity
-              {' '}
-              <span className="text-yellow">Takes <br /> Courage.</span>
-            </h1>
-            <p>- Henri Matisse</p>
-          </div>
-        </div>
+
+      <section className="w-full h-screen max-md:h-[70vh]">
+        <Sliding_1st />
       </section>
 
       {/* Services Section  */}

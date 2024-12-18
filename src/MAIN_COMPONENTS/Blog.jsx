@@ -7,6 +7,7 @@ import blogImg3
   from '../Images/blog_images/Content-marketing-icons-1536x1536blog-3.webp';
 import blogImg4
   from '../Images/blog_images/SEM-Technology-Display-1536x1022blog-4.webp';
+import {redirect} from 'react-router-dom';
 export default function Blog () {
   const blog = [
     {
@@ -14,24 +15,28 @@ export default function Blog () {
       type: 'Blog',
       title: 'Display Advertising: A Complete Guide for Digital Marketers',
       brandName: 'Laxya',
+      redirection: 'https://laxya.net/blog/display-advertising/',
     },
     {
       image: blogImg2,
       type: 'Blog',
       title: 'Influencer Marketing: A Comprehensive Guide for Brands and Marketers',
       brandName: 'Laxya',
+      redirection: 'https://laxya.net/blog/influencer-marketing/',
     },
     {
       image: blogImg3,
       type: 'Blog',
       title: 'Content Marketing & Advertising: Understanding the Differences and Best Practicess',
       brandName: 'Laxya',
+      redirection: 'https://laxya.net/blog/content-marketing-advertising/',
     },
     {
       image: blogImg4,
       type: 'Blog',
       title: 'Search Engine Marketing (SEM): A Comprehensive Guide for Digital Success',
       brandName: 'Laxya',
+      redirection: 'https://laxya.net/blog/search-engine-marketing-sem/',
     },
   ];
   return (
@@ -48,18 +53,22 @@ export default function Blog () {
               key={index}
               className="flex flex-col justify-start items-center w-[300px] h-[400px] loadingChild"
             >
-              <div className="w-full h-[200px]">
-                <img
-                  src={data.image}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="px-5 w-full text-left">
-                <span className="font-medium text-slate-900">{data.type}</span>
-                <h1 className="text-xl">{data.title}</h1>
-                <span>{data.brandName}</span>
-              </div>
+              <a href={data.redirection}>
+                <div className="w-full h-[200px]">
+                  <img
+                    src={data.image}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="px-5 w-full text-left">
+                  <span className="font-medium text-slate-900">
+                    {data.type}
+                  </span>
+                  <h1 className="text-xl">{data.title}</h1>
+                  <span>{data.brandName}</span>
+                </div>
+              </a>
             </div>
           ))}
         </div>
@@ -74,18 +83,22 @@ export default function Blog () {
               key={index}
               className="flex flex-col justify-start items-center w-[300px] h-[400px] loadingChild"
             >
-              <div className="w-full h-[200px]">
-                <img
-                  src={data.image}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="px-5 w-full text-left">
-                <span className="font-medium text-slate-900">{data.type}</span>
-                <h1 className="text-xl">{data.title}</h1>
-                <span>{data.brandName}</span>
-              </div>
+              <a href={data.redirection}>
+                <div className="w-full h-[200px]">
+                  <img
+                    src={data.image}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="px-5 w-full text-left">
+                  <span className="font-medium text-slate-900">
+                    {data.type}
+                  </span>
+                  <h1 className="text-xl">{data.title}</h1>
+                  <span>{data.brandName}</span>
+                </div>
+              </a>
             </div>
           ))}
         </div>

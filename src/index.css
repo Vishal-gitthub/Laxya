@@ -7,6 +7,12 @@
   --swiper-navigation-size: 21px !important;
 }
 
+/* Animate background image position */
+.bg-animate {
+  background-position: right 30px bottom 20px;
+  /* Adjust values as needed */
+}
+
 .bg-scroll-img {
   background-image: url('./Images/LandingPage-Images/Scrolling-Image.webp');
   background-position: center;
@@ -15,14 +21,21 @@
   background-attachment: scroll;
 }
 
+/* .bg-scroll-img2 {
+  background-image: url('./Images/LandingPage-Images/Scrolling-Image.webp');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: scroll;
+} */
+
+
 .text-stroke {
   -webkit-text-stroke: 2px black;
 }
 
 .slider-container {
   position: relative;
-  /* margin-left: 4rem;
-  margin-right: 4rem; */
 }
 
 /* The wrapper for the sliding content */
@@ -103,15 +116,10 @@
 
 .slide {
   position: absolute;
-  /* Position the text on top of the image */
   z-index: 3;
-  /* Text starts behind the image */
   margin-left: 10px;
-  /* Space between image and text */
   opacity: 0;
-  /* Initially, make the text invisible */
   transition: opacity 0.3s ease, transform 0.3s ease;
-  /* Smooth transition for opacity and movement */
   transform: translateX(-100%);
   background: #6a6b6b;
   width: 97vw;
@@ -192,14 +200,12 @@
 @keyframes appear {
   from {
     opacity: 0;
-    scale: 0.5;
-    transform: translateX(-100%);
+    scale: 0.9;
   }
 
   to {
     opacity: 1;
     scale: 1;
-    transform: translateX(0%);
   }
 }
 
@@ -227,8 +233,27 @@
 }
 
 @keyframes l3 {
+
   90%,
   100% {
     transform: translate(calc(var(--s, 1) * 30px));
   }
+}
+
+.swiper-button-next {
+  left: 120px !important;
+
+
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 90% !important;
+  color: black !important;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 60px !important;
+  color: black !important;
 }

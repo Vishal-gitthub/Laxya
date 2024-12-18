@@ -1,8 +1,9 @@
-import React from 'react';
-import {EffectFade, Pagination} from 'swiper/modules';
+import React, {useState} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
+import {EffectFade, Navigation, Pagination, Autoplay} from 'swiper/modules'; // Import Autoplay module
 import 'swiper/css';
 import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import '../Landing-page-components/Slider.css';
 
@@ -14,22 +15,24 @@ import car from '../../Images/LandingPage-Images/car.webp';
 import eicher from '../../Images/LandingPage-Images/eicher.webp';
 import gym from '../../Images/LandingPage-Images/gym.webp';
 
-const images = [
-  {src: suzuki, alt: 'Suzuki Motorbike'},
-  {src: redtape, alt: 'RedTape Shoes'},
-  {src: raider, alt: 'Raider Motorbike'},
-  {src: itruder, alt: 'Intruder Motorbike'},
-  {src: eicher, alt: 'Eicher Truck'},
-  {src: car, alt: 'Luxury Car'},
-  {src: gym, alt: 'Gym Equipment'},
+const slides = [
+  {image: suzuki, alt: 'Suzuki Motorbike'},
+  {image: redtape, alt: 'RedTape Shoes'},
+  {image: raider, alt: 'Raider Motorbike'},
+  {image: itruder, alt: 'Intruder Motorbike'},
+  {image: eicher, alt: 'Eicher Truck'},
+  {image: car, alt: 'Luxury Car'},
+  {image: gym, alt: 'Gym Equipment'},
 ];
 
-const ExperienceCarousel = () => {
-  return (
-    <section>
+export default function ExperienceCarousel() {
+  const [isSlideChanging, setIsSlideChanging] = useState(false);
 
+  return (
+    <div className="relative w-full h-full">
       <Swiper
-        modules={[EffectFade, Pagination]}
+        modules={[EffectFade, Navigation, Pagination, Autoplay]}
+        navigation
         effect="fade"
         pagination={{
           clickable: true,
@@ -41,31 +44,27 @@ const ExperienceCarousel = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        onSlideChangeTransitionStart={swiper => {
-          const currentSlide = swiper.slides[swiper.activeIndex];
-          currentSlide.classList.add ('slide-animate');
-        }}
-        onSlideChangeTransitionEnd={swiper => {
-          const allSlides = swiper.slides;
-          allSlides.forEach (slide => {
-            slide.classList.remove ('slide-animate');
-          });
-        }}
-        className="my-swiper"
+        onSlideChangeTransitionStart={() => setIsSlideChanging(true)}
+        onSlideChangeTransitionEnd={() => setIsSlideChanging(false)}
+        className="w-full h-full"
       >
-        {images.map ((image, index) => (
-          <SwiperSlide
-            key={index}
-            style={{
-              backgroundImage: `url(${image.src})`,
-            }}
-            className="bg-contain w-full h-full transition-transform duration-500 ease-in-out"
-          />
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index} className="w-full h-full">
+            <div className="relative pb-[56.25%] w-full h-0 overflow-hidden">
+              {/* Slide Image */}
+              <img
+                src={slide.image}
+                alt={slide.alt}
+                className={`absolute inset-0 w-full h-full object-contain transition-all duration-500 ${
+                  isSlideChanging
+                    ? '-translate-x-[1%] -translate-y-[2%] opacity-50'
+                    : 'translate-x-0 translate-y-0 opacity-100'
+                }`}
+              />
+            </div>
+          </SwiperSlide>
         ))}
       </Swiper>
-
-    </section>
+    </div>
   );
-};
-
-export default ExperienceCarousel;
+}
