@@ -22,13 +22,15 @@ const Navbar = () => {
     <header className="top-0 z-50 sticky bg-white shadow-md">
       <nav className="flex justify-between items-center mx-auto px-4 py-3 container">
         {/* Logo */}
-        <div className="w-auto">
-          <img
-            src={laxyaLogo}
-            alt="Laxya Logo"
-            className="w-auto max-w-[150px]"
-          />
-        </div>
+        <Link to="/">
+          <div className="w-auto">
+            <img
+              src={laxyaLogo}
+              alt="Laxya Logo"
+              className="w-auto max-w-[150px]"
+            />
+          </div>
+        </Link>
 
         {/* Desktop Links */}
         <div className="md:flex space-x-6 hidden text-sm">
