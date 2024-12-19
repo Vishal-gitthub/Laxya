@@ -63,6 +63,7 @@ export default function AboutUsSection () {
             <span className="text-black">Creativity</span>
             <span className="text-yellow"> Takes <br /> Courage.</span>
           </h1>
+          <span className='font-yeseva'>- Henri Matisse</span>
         </div>
       </div>
     </section>
