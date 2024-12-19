@@ -7,20 +7,35 @@ gsap.registerPlugin (ScrollTrigger);
 
 export default function AboutUsSection () {
   const imgContainerRef = useRef (null);
-
-  useEffect (() => {
-    // Animate using translateY for smoother transitions
-    gsap.to (imgContainerRef.current, {
-      y: -240, // Final shift value
-      scrollTrigger: {
-        trigger: imgContainerRef.current,
-        start: 'top 80%', // Start when top of the element is at 80% of viewport
-        end: 'bottom 20%', // End when bottom of the element is at 20% of viewport
-        scrub: 0.5, // Smooth scrub (adjust for finer control)
+  useEffect(() => {
+    const mm = gsap.matchMedia();
+  
+    mm.add(
+      {
+        // Define breakpoints
+        isDesktop: "(min-width: 1024px)", // Desktop and larger screens
+        isMobile: "(max-width: 1023px)", // Mobile and smaller tablets
       },
-      ease: 'power1.out', // Smooth easing curve
-    });
+      (context) => {
+        let yValue = context.conditions.isDesktop ? -240 : -30; 
+  
+        gsap.to(imgContainerRef.current, {
+          y: yValue, // Responsive shift value
+          scrollTrigger: {
+            trigger: imgContainerRef.current,
+            start: "top 80%", // Start when top is at 80% of viewport
+            end: "bottom 20%", // End when bottom is at 20% of viewport
+            scrub: 0.5, // Smooth scrub
+          },
+          ease: "power1.out", // Smooth easing curve
+        });
+      }
+    );
+  
+    // Clean up matchMedia on component unmount
+    return () => mm.revert();
   }, []);
+  
 
   return (
     <section className="bg-[#f9f9f9] pb-48 w-full">

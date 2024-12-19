@@ -12,7 +12,7 @@ const LaxyaB = () => {
       return (
             <div className="bg-[#ececec] p-[10px] group loadingChild">
                   <section className='pb-16'>
-                        <div className='group-hover:scale-[0.98] max-w-[500px] max-sm:max-w-[270px] h-[360px] transition-all duration-500'>
+                        <div className="group-hover:scale-[0.98] max-md:w-full max-w-[500px] h-[360px] transition-all duration-500">
                               <Swiper navigation={true} autoplay={{ delay: 2400, disableOnInteraction: false }} loop={true} modules={[Navigation, Autoplay]} className="mySwiper" >
                                     {laxyaImage.map((data, index) => (
                                           <SwiperSlide key={index}>

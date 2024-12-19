@@ -754,17 +754,17 @@ export default function StillShoot () {
             onClick={e => e.stopPropagation ()} // Prevent click from closing the modal when clicking inside
           >
             <button
-              className="top-2 right-2 absolute text-black"
+              className="top-2 right-2 absolute font-black text-5xl text-black hover:text-yellow"
               onClick={closeModal}
             >
-              X
+              X 
             </button>
             <div className="h-full">
               <Slider {...settings}>
                 {modalImages.map ((image, index) => (
                   <div
                     key={index}
-                    className="flex justify-center items-center w-96 max-sm:w-screen h-96 max-sm:h-screen outline-none"
+                    className="flex justify-center items-center w-96 max-sm:w-screen h-96 max-sm:h-full outline-none"
                   >
                     <img
                       src={image}

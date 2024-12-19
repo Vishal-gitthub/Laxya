@@ -43,25 +43,26 @@ const Landing = () => {
         <ExperienceCarousel />
       </div>
 
-      <section className="max-sm:mb-12 max-md:mb-28 w-full h-[80vh] max-sm:h-[60vh] max-md:h-[70vh]">
+      <section className="max-sm:mb-12 max-md:mb-28 w-full h-[60vh] max-sm:h-auto max-md:h-auto">
         <Sliding_1st />
       </section>
 
       {/* Services Section  */}
-      <section className="bg-[#f9f9f9] mx-auto px-[133.5px] max-sm:px-3 py-10">
+      <section className="bg-[#f9f9f9] mx-auto px-[120.5px] max-sm:px-3 py-10">
         <div>
           <h1 className="font-yeseva text-[#222222] text-[152px] max-sm:text-[52px] max-md:text-[100px]">
             serv<span className="text-stroke text-transparent">ices</span>
           </h1>
         </div>
         <Link to="/contact">
-          <div className="place-items-center gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-28">
             {ServicesImage.map ((service, index) => (
               <div
                 key={index}
-                className="bg-[#ececec] p-[7px] w-full sm:w-[300px] lg:w-[258px] h-[400px] overflow-hiden group loadingChild"
+                className="bg-[#ececec] p-[7px] w-full h-[400px] overflow-hidden group loadingChild"
               >
                 <div className="group-hover:scale-95 w-full h-full transition-all duration-500">
+                  {/* Image Section */}
                   <div
                     className="w-full h-[83.2%]"
                     style={{
@@ -71,6 +72,7 @@ const Landing = () => {
                       backgroundPosition: 'center',
                     }}
                   />
+                  {/* Name Section */}
                   <div className="bg-yellow p-4 font-roboto font-semibold text-[#222222] text-[22px] text-left">
                     <h1>{service.name}</h1>
                   </div>
@@ -78,18 +80,19 @@ const Landing = () => {
               </div>
             ))}
           </div>
+
         </Link>
 
       </section>
 
       {/* Portfolio Section  */}
-      <section className="bg-white px-[75px] max-sm:px-3 py-5">
+      <section className="bg-white px-[120px] max-sm:px-3 py-5">
         <div>
           <h1 className="mb-10 font-yeseva text-[#222222] text-[152px] max-sm:text-[52px] max-md:text-[100px]">
             port<span className="text-stroke text-transparent">folio</span>
           </h1>
         </div>
-        <div className="flex flex-wrap justify-center items-center">
+        <div className="flex flex-wrap justify-between items-center">
           {portfolioImages.map ((data, index) => (
             <Link
               to={data.redirection}
@@ -142,7 +145,7 @@ const Landing = () => {
               Whether you're in search of a film production house in Delhi or corporate video makers in Delhi, our studios offer the perfect setting to bring your creative vision to life.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-8 pb-28 select-Bone">
+          <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-28">
             <AqubeStudio />
             <FillMeStudio />
             <LaxyaA />
