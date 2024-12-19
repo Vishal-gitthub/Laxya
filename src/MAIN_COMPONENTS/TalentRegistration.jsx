@@ -1,21 +1,27 @@
 import React from 'react';
-import ContactHeader from '../Images/Contact_image/Lets Connect.jpg';
+import TalentHeader from '../Images/TalentRegistration/Talent Header.jpeg';
 
-export default function TalentRegistration() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted");
+export default function TalentRegistration () {
+  const handleSubmit = e => {
+    e.preventDefault ();
+    console.log ('Form submitted');
   };
 
   return (
     <div className="bg-white font-roboto">
       <div className="w-full">
-        <img src={ContactHeader} className="w-full object-cover" alt="Contact Header" />
+        <img
+          src={TalentHeader}
+          className="w-full object-cover"
+          alt="Contact Header"
+        />
       </div>
       <div className="bg-[#f1f1f1] px-24 max-sm:px-6 max-md:px-12 py-16">
-        <div className="flex justify-center items-center gap-[60px] bg-white shadow-xl px-16 max-sm:px-[25px] max-md:px-[50px] py-[90px] rounded-[25px]">
+        <div className="flex justify-center items-center gap-[60px] bg-white shadow-xl px-16 max-sm:px-[25px] max-md:px-[50px] py-[90px] max-sm:py-[30px] rounded-[25px]">
           <div>
-            <h1 className="font-black text-[#222222] text-4xl">Career</h1>
+            <h1 className="font-black text-[#222222] text-4xl max-sm:text-2xl">
+              Talent Registration
+            </h1>
             <p className="py-5 text-[#c0c0c7] text-[18px]">
               Feel free to contact us anytime. We will get back to you as soon as we can!
             </p>
@@ -34,7 +40,7 @@ export default function TalentRegistration() {
                   required
                 />
               </div>
-              
+
               <div className="mt-4">
                 <input
                   type="email"

@@ -2,26 +2,42 @@ import React, {useEffect, useRef} from 'react';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import scrollimg from '../../Images/LandingPage-Images/Scrolling-Image.webp';
+
 gsap.registerPlugin (ScrollTrigger);
 
 export default function AboutUsSection () {
   const imgContainerRef = useRef (null);
 
   useEffect (() => {
-    gsap.to (imgContainerRef.current, {
-      scrollTrigger: {
-        trigger: imgContainerRef.current,
-        start: 'top 90%',
-        end: 'bottom 10%',
-        scrub: 1.5, // Slightly faster scrub for smoother effect
-      },
-      top: '-150px', // Fine-tuned for smaller devices
-      ease: 'power1.inOut', // Adds a smooth easing effect
-    });
+    const mm = gsap.matchMedia ();
 
+    mm.add (
+      {
+        isMobile: '(max-width: 768px)', // Target mobile devices
+        isDesktop: '(min-width: 769px)', // Target desktop and larger devices
+      },
+      context => {
+        let {isMobile} = context.conditions;
+
+        gsap.to (imgContainerRef.current, {
+          y: isMobile ? -100 : -230, // Apply different 'y' values based on device
+          scrollTrigger: {
+            trigger: imgContainerRef.current,
+            start: 'top 90%',
+            end: 'bottom 10%',
+            scrub: 0.5, // Smooth scroll-linked animation
+          },
+          ease: 'power1.inOut', // Adds smooth easing to the animation
+        });
+      }
+    );
+
+    // Optimize images by setting loading="lazy"
     document.querySelectorAll ('img').forEach (image => {
       image.setAttribute ('loading', 'lazy');
     });
+
+    return () => mm.revert (); // Cleanup matchMedia listeners
   }, []);
 
   return (
@@ -40,11 +56,11 @@ export default function AboutUsSection () {
             />
           </div>
         </div>
+
         {/* Text Section */}
-        <div className="relative top-52 max-sm:top-3 max-md:top-2 z-10 mt-20 max-md:mt-0 pl-4 text-left">
+        <div className="relative top-52 max-md:-top-5 z-10 mt-20 max-md:mt-0 mb-28 pl-4 text-left">
           <h1 className="font-yeseva text-[75px] max-md:text-5xl leading-snug">
             <span className="text-black">Creativity</span>
-
             <span className="text-yellow"> Takes <br /> Courage.</span>
           </h1>
         </div>

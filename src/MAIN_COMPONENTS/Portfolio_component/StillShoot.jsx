@@ -716,7 +716,7 @@ export default function StillShoot () {
 
   return (
     <section className="bg-white">
-      <div className="mb-[100px] w-full">
+      <div className="mb-[40px] w-full">
         <img src={portfolioHeader} alt="" className="w-full object-cover" />
       </div>
       <div className="flex flex-wrap justify-center items-center gap-5 px-[75px] max-sm:px-3 py-5">
@@ -750,7 +750,7 @@ export default function StillShoot () {
           onClick={handleBackdropClick}
         >
           <div
-            className="bg-white p-8 w-4/5 md:w-2/3 h-auto"
+            className="bg-white p-8 w-full md:w-full h-auto"
             onClick={e => e.stopPropagation ()} // Prevent click from closing the modal when clicking inside
           >
             <button
@@ -764,7 +764,7 @@ export default function StillShoot () {
                 {modalImages.map ((image, index) => (
                   <div
                     key={index}
-                    className="flex justify-center items-center w-96 h-96 outline-none"
+                    className="flex justify-center items-center w-96 max-sm:w-screen h-96 max-sm:h-screen outline-none"
                   >
                     <img
                       src={image}

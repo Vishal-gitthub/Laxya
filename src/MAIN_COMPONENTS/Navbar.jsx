@@ -12,7 +12,7 @@ const Navbar = () => {
     {name: 'ABOUT', path: '/about'},
     {name: 'PORTFOLIO', path: '/portfolio'},
     {name: 'BLOGS', path: '/blog'},
-    {name: 'CAREERS', path: '/career'},
+    {name: 'TALENT REGISTRATION', path: '/talent'},
     {name: 'CONTACT', path: '/contact'},
   ];
 
@@ -27,13 +27,13 @@ const Navbar = () => {
             <img
               src={laxyaLogo}
               alt="Laxya Logo"
-              className="w-auto max-w-[150px]"
+              className="max-w-[195px] max-sm:max-w-[215px] max-md:max-w-[195px]"
             />
           </div>
         </Link>
 
         {/* Desktop Links */}
-        <div className="md:flex space-x-6 hidden text-sm">
+        <div className="md:flex flex-shrink-0 space-x-6 hidden text-[15px]">
           {links.map (link => (
             <NavLink
               key={link.name}
@@ -68,7 +68,7 @@ const Navbar = () => {
           <img
             src={laxyaLogo}
             alt="Laxya Logo"
-            className="w-auto max-w-[120px]"
+            className="max-w-[195px] max-sm:max-w-[215px] max-md:max-w-[195px]"
           />
 
           {/* Close Button */}

@@ -12,10 +12,10 @@ export default function Portfolio () {
 
   return (
     <div className="bg-white">
-      <div className="mb-[100px] w-full">
+      <div className="mb-[30px] w-full">
         <img src={portfolioHeader} alt="" className="w-full object-cover" />
       </div>
-      <section className="mx-[90px] max-sm:mx-[10px] max-md:mx-[45px] py-20">
+      <section className="mx-[90px] max-sm:mx-[10px] max-md:mx-[45px] py-5">
         <div>
           <div>
             <h1 className="mb-10 font-yeseva text-[152px] max-sm:text-[52px] max-md:text-[100px] leading-none">
@@ -23,7 +23,7 @@ export default function Portfolio () {
             </h1>
           </div>
         </div>
-        <div className="pt-36">
+        <div className="pt-14">
           <div className="flex flex-wrap justify-center items-center">
             {portfolioImages.map ((data, index) => (
               <Link

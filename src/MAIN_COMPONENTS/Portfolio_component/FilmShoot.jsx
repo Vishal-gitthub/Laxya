@@ -52,7 +52,7 @@ const stillShoot = [
 export default function FilmShoot () {
   return (
     <section className="bg-white">
-      <div className="mb-[100px] w-full">
+      <div className="mb-[30px] w-full">
         <img src={portfolioHeader} alt="" className="w-full object-cover" />
       </div>
       <div className="flex flex-wrap justify-center items-center gap-5 px-[75px] max-sm:px-3 py-5">
