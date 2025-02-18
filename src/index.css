@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,7 +27,6 @@
   background-color: #ccccccbe;
 }
 
-
 /* Animate background image position */
 .bg-animate {
   background-position: right 30px bottom 20px;
@@ -35,7 +34,7 @@
 }
 
 .bg-scroll-img {
-  background-image: url('./Images/LandingPage-Images/Scrolling-Image.webp');
+  background-image: url("./Images/LandingPage-Images/Scrolling-Image.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -50,11 +49,9 @@
   background-attachment: scroll;
 } */
 
-
 .text-stroke {
   -webkit-text-stroke: 2px black;
 }
-
 
 /* brands Slider for landing page */
 .slider-container {
@@ -85,11 +82,7 @@
   }
 }
 
-
 /* --------------------brands logo slider animation ends ------------------- */
-
-
-
 
 .swiper {
   width: 100%;
@@ -115,7 +108,7 @@
 }
 
 .bg-Img {
-  background-image: url('https://www.laxya.net/images/free3.jpg');
+  background-image: url("https://www.laxya.net/images/free3.jpg");
   width: 100%;
   height: 100%;
   background-position: 70%;
@@ -244,7 +237,7 @@
 
 .loader:before,
 .loader:after {
-  content: '';
+  content: "";
   width: 40px;
   border-radius: 50%;
   background: #e1b924;
@@ -256,7 +249,6 @@
 }
 
 @keyframes l3 {
-
   90%,
   100% {
     transform: translate(calc(var(--s, 1) * 30px));
@@ -265,8 +257,6 @@
 
 .swiper-button-next {
   left: 120px !important;
-
-
 }
 
 .swiper-button-prev,
@@ -279,4 +269,23 @@
 .swiper-rtl .swiper-button-next {
   left: 60px !important;
   color: black !important;
+}
+
+/* ----------------------- */
+
+/* slick carousel */
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+  font-size: 30px !important;
+}
+
+.slick-next {
+  /* right: 50% !important; */
+  z-index: 9999 !important ;
+}
+.slick-prev {
+  z-index: 9999 !important;
+  /* left: 0 !important; */
 }

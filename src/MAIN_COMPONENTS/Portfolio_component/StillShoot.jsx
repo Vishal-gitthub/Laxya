@@ -1,24 +1,24 @@
-import React, {useState} from 'react';
+import { useState } from "react";
 
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import portfolioHeader from '../../Images/portfolio_image/Portfolio.jpg';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import portfolioHeader from "../../Images/portfolio_image/Portfolio.jpg";
 
-import stillShootImages from './StillShootImageImports';
+import stillShootImages from "./StillShootImageImports";
 
 const {
   adidas,
+  Asuka,
+  pepsi,
   appoloTyres,
   bacardi,
   bbc,
-  Franklin,
   Eicher,
   Dew,
   Gravity,
   Honda,
   intruder,
-  ImperialBlue,
   MonsterJob,
   Mahou,
   msNexa,
@@ -28,7 +28,6 @@ const {
   Oriflame,
   TvsRaider,
   RedTape,
-  Reebok,
   RoyalStagOccasion,
   RoyalStagT20,
   RoyalStagMOP,
@@ -37,10 +36,8 @@ const {
   StellerDream,
   SundayDesign,
   Teachers,
-  Viber,
-  Voltas,
-  Yamaha,
   WhiteHat,
+  MS_Colors_Of_Youth,
 
   //------------------ adidas exporting
   adidas10,
@@ -57,6 +54,16 @@ const {
   adidas21,
   adidas22,
   adidas23,
+  //------------------ asuka exporting
+
+  asuka1,
+  asuka2,
+  asuka3,
+  asuka4,
+  asuka5,
+  asuka6,
+  asuka7,
+  asuka8,
 
   // -------------------appolo exporting
   appolo1,
@@ -80,7 +87,6 @@ const {
   BBC5,
   BBC6,
   BBC7,
-  BBC8,
   // -------------eicher exporting
   eicher1,
   eicher2,
@@ -94,13 +100,7 @@ const {
   eicher10,
   eicher11,
   // --------------------
-  // franklin ------------------
-  franklin1,
-  franklin2,
-  franklin3,
-  franklin4,
-  franklin5,
-  franklin6,
+
   // -------------------gixer
   suzuki1,
   suzuki2,
@@ -158,7 +158,6 @@ const {
   msNexa6,
   msNexa7,
   // -----------------MonsterJob
-  monster1,
   monster2,
   monster3,
   monster4,
@@ -178,6 +177,8 @@ const {
   // -------------nokia
   nokia2,
   nokia1,
+  nokia3,
+  nokia4,
   // -------------oriflame
   oriflame1,
   oriflame2,
@@ -201,11 +202,7 @@ const {
   RedTape6,
   RedTape7,
   RedTape8,
-  // ----------------Reebok
-  reebok1,
-  reebok2,
-  reebok3,
-  reebok4,
+
   // ---------------RoyalStagT20
   rs2,
   rs3,
@@ -259,7 +256,6 @@ const {
   stellers17,
   stellers18,
   // --------------somany
-  Somany1,
   Somany2,
   Somany3,
   Somany4,
@@ -279,37 +275,17 @@ const {
   // ---------------tvs raider
   TvsRaider1,
   TvsRaider2,
+  TvsRaider3,
+  TvsRaider4,
+  TvsRaider5,
+  TvsRaider6,
   // --------------teachers
   teachers1,
   teachers2,
   teachers3,
   teachers4,
   teachers5,
-  // -----------------Viber
-  viber1,
-  viber2,
-  viber3,
-  viber4,
-  viber5,
-  viber6,
-  viber7,
-  viber8,
-  viber9,
-  viber10,
-  viber11,
-  viber12,
-  // --------------
-  voltas1,
-  voltas2,
-  voltas3,
-  voltas4,
-  voltas5,
-  voltas6,
-  voltas7,
-  voltas8,
-  voltas9,
-  // -------------------
-  yamaha,
+
   // ------------------------
   whiteHat1,
   whiteHat2,
@@ -327,6 +303,42 @@ const {
   whiteHat14,
   whiteHat15,
   whiteHat16,
+  // ------------------------
+  // pepsi
+  pepsi1,
+  pepsi2,
+  pepsi3,
+  pepsi4,
+  pepsi5,
+  pepsi6,
+  // ------------------------
+  suzukiSE1,
+  suzukiSE2,
+  suzukiSE3,
+  suzukiSE4,
+  suzukiSE5,
+  //   MS_Colors_Of_Youth1,------------------------
+  MS_COY1,
+  MS_COY2,
+  MS_COY3,
+  MS_COY4,
+  MS_COY5,
+  MS_COY6,
+  MS_COY7,
+  //   Crimsoun Club,------------------------
+  Cc1,
+  Cc2,
+  Cc3,
+  Cc4,
+  Cc5,
+  Cc6,
+  Cc7,
+  Cc8,
+  Cc9,
+  Cc10,
+  Cc11,
+  Cc12,
+  Cc13,
 } = stillShootImages;
 
 const stillShoot = [
@@ -348,41 +360,93 @@ const stillShoot = [
       adidas23,
     ],
     image: adidas,
-    text: 'Adidas',
+    text: "Adidas",
+  },
+
+  {
+    carouselImages: [
+      suzuki1,
+      suzuki12,
+      suzuki13,
+      suzuki3,
+      suzuki4,
+      suzuki5,
+      suzuki6,
+      suzuki7,
+      suzuki8,
+      suzuki9,
+      suzuki10,
+      suzuki11,
+      suzuki14,
+      suzuki15,
+      suzuki2,
+    ],
+    image: gixxer,
+    text: "Suzuki Gixxer",
+  },
+  {
+    carouselImages: [suzukiSE1, suzukiSE2, suzukiSE3, suzukiSE4, suzukiSE5],
+    image: suzukiSE5,
+    text: "Suzuki SE 125",
+  },
+
+  {
+    carouselImages: [
+      intruder1,
+      intruder2,
+      intruder3,
+      intruder4,
+      intruder5,
+      intruder6,
+      intruder7,
+      intruder8,
+      intruder9,
+    ],
+    image: intruder,
+    text: "Suzuki Intruder",
   },
   {
     carouselImages: [
-      bacardi1,
-      bacardi2,
-      bacardi3,
-      bacardi4,
-      bacardi5,
-      bacardi6,
+      TvsRaider2,
+      TvsRaider1,
+      TvsRaider3,
+      TvsRaider4,
+      TvsRaider5,
+      TvsRaider6,
     ],
-    image: bacardi,
-    text: 'Bacardi',
+    image: TvsRaider,
+    text: "TVS Raider",
   },
   {
-    carouselImages: [BBC1, BBC2, BBC3, BBC4, BBC5, BBC6, BBC7, BBC8],
-    image: bbc,
-    text: 'BBC',
-  },
-  {
-    carouselImages: [appolo1, appolo2, appolo3, appolo4, appolo5],
-    image: appoloTyres,
-    text: 'Appolo Tyres',
+    carouselImages: [honda1, honda2, honda3, honda4, honda5, honda6, honda7],
+    image: Honda,
+    text: "Honda City",
   },
   {
     carouselImages: [
-      franklin1,
-      franklin2,
-      franklin3,
-      franklin4,
-      franklin5,
-      franklin6,
+      msNexa1,
+      msNexa2,
+      msNexa3,
+      msNexa4,
+      msNexa5,
+      msNexa6,
+      msNexa7,
     ],
-    image: Franklin,
-    text: 'Franklin Templton',
+    image: msNexa,
+    text: "Maruti Suzuki Nexa",
+  },
+  {
+    carouselImages: [
+      MS_COY1,
+      MS_COY2,
+      MS_COY3,
+      MS_COY4,
+      MS_COY5,
+      MS_COY6,
+      MS_COY7,
+    ],
+    image: MS_Colors_Of_Youth,
+    text: "MS Colors Of Youth",
   },
   {
     carouselImages: [
@@ -399,164 +463,28 @@ const stillShoot = [
       eicher11,
     ],
     image: Eicher,
-    text: 'Eicher',
+    text: "Eicher",
   },
   {
-    carouselImages: [dew1, dew2, dew3, dew4],
-    image: Dew,
-    text: 'Mountain Dew',
+    carouselImages: [appolo1, appolo2, appolo3, appolo4, appolo5],
+    image: appoloTyres,
+    text: "Appolo Tyres",
   },
   {
-    carouselImages: [
-      suzuki1,
-      suzuki2,
-      suzuki3,
-      suzuki4,
-      suzuki5,
-      suzuki6,
-      suzuki7,
-      suzuki8,
-      suzuki9,
-      suzuki10,
-      suzuki11,
-      suzuki12,
-      suzuki13,
-      suzuki14,
-      suzuki15,
-    ],
-    image: gixxer,
-    text: 'Suzuki Gixxer',
+    carouselImages: [BBC1, BBC2, BBC4, BBC5, BBC6, BBC3, BBC7],
+    image: bbc,
+    text: "BBC",
   },
+
   {
-    carouselImages: [gravity1, gravity2, gravity3, gravity4],
-    image: Gravity,
-    text: 'Gravity',
-  },
-  {
-    carouselImages: [honda1, honda2, honda3, honda4, honda5, honda6, honda7],
-    image: Honda,
-    text: 'Honda City',
-  },
-  {carouselImages: [ImperialBlue], image: ImperialBlue, text: 'Imperial Blue'},
-  {
-    carouselImages: [monster1, monster2, monster3, monster4],
+    carouselImages: [monster2, monster3, monster4],
     image: MonsterJob,
-    text: 'Monster Job',
-  },
-  {
-    carouselImages: [
-      intruder1,
-      intruder2,
-      intruder3,
-      intruder4,
-      intruder5,
-      intruder6,
-      intruder7,
-      intruder8,
-      intruder9,
-    ],
-    image: intruder,
-    text: 'Suzuki Intruder',
-  },
-  {
-    carouselImages: [
-      mahou1,
-      mahou2,
-      mahou3,
-      mahou4,
-      mahou5,
-      mahou6,
-      mahou7,
-      mahou8,
-    ],
-    image: Mahou,
-    text: 'Mahou',
-  },
-  {
-    carouselImages: [
-      msNexa1,
-      msNexa2,
-      msNexa3,
-      msNexa4,
-      msNexa5,
-      msNexa6,
-      msNexa7,
-    ],
-    image: msNexa,
-    text: 'Maruti Suzuki Nexa',
+    text: "Monster Job",
   },
   {
     carouselImages: [ngc1, ngc2, ngc3, ngc4, ngc5, ngc6, ngc7],
     image: NGC,
-    text: 'NGC',
-  },
-  {
-    carouselImages: [nokia1, nokia2],
-    image: Nokia,
-    text: 'Nokia',
-  },
-  {
-    carouselImages: [
-      oriflame1,
-      oriflame2,
-      oriflame3,
-      oriflame4,
-      oriflame5,
-      oriflame6,
-      oriflame7,
-      oriflame8,
-      oriflame9,
-      oriflame10,
-      oriflame11,
-      oriflame12,
-      oriflame13,
-      oriflame14,
-    ],
-    image: Oriflame,
-    text: 'Oriflame',
-  },
-  {
-    carouselImages: [TvsRaider1, TvsRaider2],
-    image: TvsRaider,
-    text: 'TVS Raider',
-  },
-  {
-    carouselImages: [
-      RedTape2,
-      RedTape3,
-      RedTape4,
-      RedTape5,
-      RedTape6,
-      RedTape7,
-      RedTape8,
-    ],
-    image: RedTape,
-    text: 'Red Tape',
-  },
-  {
-    carouselImages: [reebok1, reebok2, reebok3, reebok4],
-    image: Reebok,
-    text: 'Reebok',
-  },
-  {
-    carouselImages: [
-      RoyalStagOccasion1,
-      RoyalStagOccasion2,
-      RoyalStagOccasion3,
-      RoyalStagOccasion4,
-    ],
-    image: RoyalStagOccasion,
-    text: 'Royal Stag - Occasion',
-  },
-  {
-    carouselImages: [rs2, rs3, rs4, rs5, rs6],
-    image: RoyalStagT20,
-    text: 'Royal Stag - T20',
-  },
-  {
-    carouselImages: [rsMop1, rsMop2, rsMop3, rsMop4, rsMop5, rsMop6, rsMop7],
-    image: RoyalStagMOP,
-    text: 'Royal Stag - Mark Of Purity',
+    text: "NGC",
   },
   {
     carouselImages: [
@@ -575,11 +503,117 @@ const stillShoot = [
       Samsung13,
     ],
     image: Samsung,
-    text: 'Samsung',
+    text: "Samsung",
+  },
+  {
+    carouselImages: [nokia1, nokia2, nokia3, nokia4],
+    image: Nokia,
+    text: "Nokia",
+  },
+
+  {
+    carouselImages: [
+      RedTape2,
+      RedTape7,
+      RedTape8,
+      RedTape3,
+      RedTape4,
+      RedTape5,
+      RedTape6,
+    ],
+    image: RedTape,
+    text: "Red Tape",
   },
   {
     carouselImages: [
-      Somany1,
+      Cc1,
+      Cc2,
+      Cc3,
+      Cc4,
+      Cc5,
+      Cc6,
+      Cc7,
+      Cc8,
+      Cc9,
+      Cc10,
+      Cc11,
+      Cc12,
+      Cc13,
+    ],
+    image: Cc1,
+    text: "Crimsoune Club",
+  },
+
+  {
+    carouselImages: [dew1, dew2, dew3, dew4],
+    image: Dew,
+    text: "Mountain Dew",
+  },
+  {
+    carouselImages: [pepsi1, pepsi2, pepsi3, pepsi4, pepsi5, pepsi6],
+    image: pepsi,
+    text: "Pepsi",
+  },
+
+  {
+    carouselImages: [
+      mahou1,
+      mahou2,
+      mahou3,
+      mahou4,
+      mahou5,
+      mahou6,
+      mahou7,
+      mahou8,
+    ],
+    image: Mahou,
+    text: "Mahou",
+  },
+
+  {
+    carouselImages: [mahou1, mahou2, mahou3, mahou4, mahou5, mahou6],
+    image: Mahou,
+    text: "Mahou",
+  },
+  {
+    carouselImages: [
+      RoyalStagOccasion1,
+      RoyalStagOccasion2,
+      RoyalStagOccasion3,
+      RoyalStagOccasion4,
+    ],
+    image: RoyalStagOccasion,
+    text: "Royal Stag - Occasion",
+  },
+  {
+    carouselImages: [rs2, rs3, rs4, rs5, rs6],
+    image: RoyalStagT20,
+    text: "Royal Stag - T20",
+  },
+  {
+    carouselImages: [rsMop1, rsMop2, rsMop3, rsMop4, rsMop5, rsMop6, rsMop7],
+    image: RoyalStagMOP,
+    text: "Royal Stag - Mark Of Purity",
+  },
+  {
+    carouselImages: [
+      bacardi1,
+      bacardi2,
+      bacardi3,
+      bacardi4,
+      bacardi5,
+      bacardi6,
+    ],
+    image: bacardi,
+    text: "Bacardi",
+  },
+  {
+    carouselImages: [teachers3, teachers1, teachers2, teachers4, teachers5],
+    image: Teachers,
+    text: "Teachers",
+  },
+  {
+    carouselImages: [
       Somany2,
       Somany3,
       Somany4,
@@ -592,7 +626,12 @@ const stillShoot = [
       Somany11,
     ],
     image: Somany,
-    text: 'Somany',
+    text: "Somany",
+  },
+  {
+    carouselImages: [gravity1, gravity2, gravity3, gravity4],
+    image: Gravity,
+    text: "Gravity",
   },
   {
     carouselImages: [
@@ -616,52 +655,47 @@ const stillShoot = [
       stellers18,
     ],
     image: StellerDream,
-    text: 'Stellars Dream',
+    text: "Stellars Dream",
   },
   {
     carouselImages: [sunday1, sunday2, sunday3, sunday4, sunday5],
     image: SundayDesign,
-    text: 'Sunday Design',
-  },
-  {
-    carouselImages: [teachers1, teachers2, teachers3, teachers4, teachers5],
-    image: Teachers,
-    text: 'Teachers',
+    text: "Sunday Design",
   },
   {
     carouselImages: [
-      viber1,
-      viber2,
-      viber3,
-      viber4,
-      viber5,
-      viber6,
-      viber7,
-      viber8,
-      viber9,
-      viber10,
-      viber11,
-      viber12,
+      asuka1,
+      asuka2,
+      asuka3,
+      asuka4,
+      asuka5,
+      asuka6,
+      asuka7,
+      asuka8,
     ],
-    image: Viber,
-    text: 'Viber',
+    image: Asuka,
+    text: "Asuka",
   },
   {
     carouselImages: [
-      voltas1,
-      voltas2,
-      voltas3,
-      voltas4,
-      voltas5,
-      voltas6,
-      voltas7,
-      voltas8,
-      voltas9,
+      oriflame1,
+      oriflame2,
+      oriflame3,
+      oriflame4,
+      oriflame5,
+      oriflame6,
+      oriflame7,
+      oriflame8,
+      oriflame9,
+      oriflame10,
+      oriflame11,
+      oriflame12,
+      oriflame13,
+      oriflame14,
     ],
-    image: Voltas,
-    text: 'Voltas',
+    image: Oriflame,
+    text: "Oriflame",
   },
-  {carouselImages: [yamaha], image: Yamaha, text: 'Yamaha'},
   {
     carouselImages: [
       whiteHat1,
@@ -682,29 +716,29 @@ const stillShoot = [
       whiteHat16,
     ],
     image: WhiteHat,
-    text: 'White Hat',
+    text: "White Hat",
   },
 ];
-export default function StillShoot () {
-  const [isModalOpen, setIsModalOpen] = useState (false);
-  const [modalImages, setModalImages] = useState ([]);
+export default function StillShoot() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImages, setModalImages] = useState([]);
 
-  const handleCardClick = index => {
+  const handleCardClick = (index) => {
     // Set images based on the clicked card
-    setModalImages (stillShoot[index].carouselImages);
-    setIsModalOpen (true);
+    setModalImages(stillShoot[index].carouselImages);
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setIsModalOpen (false);
-    setModalImages ([]);
+    setIsModalOpen(false);
+    setModalImages([]);
   };
 
-  const handleBackdropClick = e => {
-    if (e.target.classList.contains ('backdrop')) {
-      closeModal ();
-    }
-  };
+  // const handleBackdropClick = (e) => {
+  //   if (e.target.classList.contains("backdrop")) {
+  //     closeModal();
+  //   }
+  // };
 
   const settings = {
     dots: true,
@@ -712,30 +746,25 @@ export default function StillShoot () {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    accessibility: true,
   };
-
   return (
     <section className="bg-white">
       <div className="mb-[40px] w-full">
         <img src={portfolioHeader} alt="" className="w-full object-cover" />
       </div>
       <div className="flex flex-wrap justify-center items-center gap-5 px-[75px] max-sm:px-3 py-5">
-        {stillShoot.map ((data, index) => (
+        {stillShoot.map((data, index) => (
           <div
             key={index}
-            className="bg-[#ececec] mx-4 p-[7px] w-full sm:w-[300px] lg:w-[45%] h-[400px] overflow-hidden group loadingChild"
-            onClick={() => handleCardClick (index)}
+            className="group bg-[#ececec] mx-4 p-[7px] w-80 max-sm:w-full max-md:w-[75%] max-lg:w-2/3 max-xl:w-2/4 h-auto overflow-hidden loadingChild"
+            onClick={() => handleCardClick(index)}
           >
-            <div className="group-hover:scale-95 w-full h-full transition-all duration-500">
-              <div
-                className="w-full h-[83.2%]"
-                style={{
-                  backgroundImage: `url(${data.image})`,
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                }}
-              />
+            <div className="w-full h-full group-hover:scale-95 transition-all duration-500">
+              <div className="w-full">
+                <img src={data.image} alt="" />
+              </div>
+
               <div className="bg-yellow p-4 font-roboto font-semibold text-[#222222] text-[22px] text-left">
                 <h1>{data.text}</h1>
               </div>
@@ -743,40 +772,40 @@ export default function StillShoot () {
           </div>
         ))}
       </div>
-
-      {isModalOpen &&
+      {isModalOpen && (
         <div
-          className="top-[55%] left-2/4 z-50 fixed inset-0 flex justify-center items-center bg-[#ffffff8d] bg-opacity-50 w-screen h-screen -translate-x-2/4 -translate-y-2/4 overflow-y-scroll backdrop"
-          onClick={handleBackdropClick}
+          className="top-[55%] left-2/4 z-50 fixed inset-0 flex justify-center items-center bg-[#ffffff8d] bg-opacity-50 w-screen h-screen overflow-y-scroll -translate-x-2/4 -translate-y-2/4 backdrop"
+          // onClick={handleBackdropClick}
         >
           <div
             className="bg-white p-8 w-full md:w-full h-auto"
-            onClick={e => e.stopPropagation ()} // Prevent click from closing the modal when clicking inside
+            onClick={(e) => e.stopPropagation()} // Prevent click from closing the modal when clicking inside
           >
             <button
-              className="top-2 right-2 absolute font-black text-5xl text-black hover:text-yellow"
+              className="top-2 right-2 absolute font-black text-black hover:text-yellow text-5xl"
               onClick={closeModal}
             >
-              X 
+              X
             </button>
-            <div className="h-full">
+            <div className="w-full h-full">
               <Slider {...settings}>
-                {modalImages.map ((image, index) => (
+                {modalImages.map((image, index) => (
                   <div
                     key={index}
-                    className="flex justify-center items-center w-96 max-sm:w-screen h-96 max-sm:h-full outline-none"
+                    className="flex justify-center items-center outline-none w-96 max-sm:w-screen h-[45rem] max-sm:h-full"
                   >
                     <img
                       src={image}
                       alt={`slide-${index}`}
-                      className="w-full h-full object-contain outline-none"
+                      className="outline-none w-full h-full object-contain"
                     />
                   </div>
                 ))}
               </Slider>
             </div>
           </div>
-        </div>}
+        </div>
+      )}
     </section>
   );
 }

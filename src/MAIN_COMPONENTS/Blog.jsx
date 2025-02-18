@@ -7,7 +7,6 @@ import blogImg3
   from '../Images/blog_images/Content-marketing-icons-1536x1536blog-3.webp';
 import blogImg4
   from '../Images/blog_images/SEM-Technology-Display-1536x1022blog-4.webp';
-import {redirect} from 'react-router-dom';
 export default function Blog () {
   const blog = [
     {
