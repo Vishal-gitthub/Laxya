@@ -10,10 +10,9 @@ export default {
         roboto: ['Roboto', 'sans-serif'],
         yeseva: ['Yeseva One', 'serif'],
         haviland: ['Mr De Haviland', 'serif'],
-        
       },
-      colors:{
-       yellow:"#ebc32a"
+      colors: {
+        yellow: "#ebc32a"
       },
 
     },

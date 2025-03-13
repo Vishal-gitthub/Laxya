@@ -45,12 +45,12 @@ const ImageSlider = () => {
         {infiniteImages.map ((image, index) => (
           <div
             key={index}
-            className="flex-shrink-0 border-[#d4d4d4] bg-white p-[20px] border rounded-md w-[150px] h-[100px] slider-item"
+            className="group flex-shrink-0 bg-white p-[20px] border-[#d4d4d4] rounded-md w-[200px] h-[100px] slider-item"
           >
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-contain"
+              className="grayscale group-hover:grayscale-0 w-full h-full object-contain group-hover:scale-110 transition-all duration-300"
             />
           </div>
         ))}

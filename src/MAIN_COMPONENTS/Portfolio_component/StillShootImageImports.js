@@ -269,7 +269,6 @@ import Somany2 from "../../Images/portfolio_image/stillShoots/modal_images/Soman
 import Somany3 from "../../Images/portfolio_image/stillShoots/modal_images/Somany/6ee4f3c4-7b55-4973-a8ab-9ff06a6df005.jpg";
 import Somany4 from "../../Images/portfolio_image/stillShoots/modal_images/Somany/7d027c2c-94f6-4bf4-b187-4d2db1529250.jpg";
 import Somany5 from "../../Images/portfolio_image/stillShoots/modal_images/Somany/8217b0f6-31c3-4e2d-856c-bae0932fad50.jpg";
-import Somany6 from "../../Images/portfolio_image/stillShoots/modal_images/Somany/e10e3fb4-adcf-49f1-80d8-fc3c83afd342.jpg";
 import Somany7 from "../../Images/portfolio_image/stillShoots/modal_images/Somany/fa5390d3-69c3-4d65-8f30-b14a9eee2da9.jpg";
 import Somany8 from "../../Images/portfolio_image/stillShoots/modal_images/Somany/IMG-20190206-WA0001.jpg";
 import Somany9 from "../../Images/portfolio_image/stillShoots/modal_images/Somany/IMG-20190206-WA0002.jpg";
@@ -371,6 +370,46 @@ import Cc10 from "../../Images/portfolio_image/stillShoots/modal_images/Crimsoun
 import Cc11 from "../../Images/portfolio_image/stillShoots/modal_images/CrimsounClub/83.jpg";
 import Cc12 from "../../Images/portfolio_image/stillShoots/modal_images/CrimsounClub/85.jpg";
 import Cc13 from "../../Images/portfolio_image/stillShoots/modal_images/CrimsounClub/97.jpg";
+
+// ---------------------
+// Phillips
+import phillips1 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-01.jpg";
+import phillips2 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-02.jpg";
+import phillips3 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-03.jpg";
+import phillips4 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-04.jpg";
+import phillips5 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-05.jpg";
+import phillips6 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-06.jpg";
+import phillips7 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-07.jpg";
+import phillips8 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-08.jpg";
+import phillips9 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-09.jpg";
+import phillips10 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-10.jpg";
+import phillips11 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-11.jpg";
+import phillips12 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-12.jpg";
+import phillips13 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-13.jpg";
+import phillips14 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-14.jpg";
+import phillips15 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-15.jpg";
+import phillips16 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-16.jpg";
+import phillips17 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-17.jpg";
+import phillips18 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-18.jpg";
+import phillips19 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-19.jpg";
+import phillips20 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-20.jpg";
+import phillips21 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-21.jpg";
+import phillips22 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-22.jpg";
+import phillips23 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-23.jpg";
+import phillips24 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-24.jpg";
+import phillips25 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-25.jpg";
+import phillips26 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-26.jpg";
+import phillips27 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-27.jpg";
+import phillips28 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/Amit-Dey-Philips-28.jpg";
+import phillips29 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/ChandraShkehar-Philips-01.jpg";
+import phillips30 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/ChandraShkehar-Philips-02.jpg";
+import phillips31 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/ChandraShkehar-Philips-03.jpg";
+import phillips32 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/ChandraShkehar-Philips-04.jpg";
+import phillips33 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/ChandraShkehar-Philips-05.jpg";
+import phillips34 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/ChandraShkehar-Philips-06.jpg";
+import phillips35 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/ChandraShkehar-Philips-07.jpg";
+import phillips36 from "../../Images/portfolio_image/stillShoots/modal_images/Phillips/ChandraShkehar-Philips-08.jpg";
+
 const stillShootImages = {
   // ------------------------------ still shoot Cards image --------------------
   adidas,
@@ -384,7 +423,6 @@ const stillShootImages = {
   Gravity,
   Honda,
   gixxer,
-  ImperialBlue,
   MonsterJob,
   Mahou,
   msNexa,
@@ -657,7 +695,6 @@ const stillShootImages = {
   Somany3,
   Somany4,
   Somany5,
-  Somany6,
   Somany7,
   Somany8,
   Somany9,
@@ -725,5 +762,42 @@ const stillShootImages = {
   Cc11,
   Cc12,
   Cc13,
+  // --------------------- phillips
+  phillips1,
+  phillips2,
+  phillips3,
+  phillips4,
+  phillips5,
+  phillips6,
+  phillips7,
+  phillips8,
+  phillips9,
+  phillips10,
+  phillips11,
+  phillips12,
+  phillips13,
+  phillips14,
+  phillips15,
+  phillips16,
+  phillips17,
+  phillips18,
+  phillips19,
+  phillips20,
+  phillips21,
+  phillips22,
+  phillips23,
+  phillips24,
+  phillips25,
+  phillips26,
+  phillips27,
+  phillips28,
+  phillips29,
+  phillips30,
+  phillips31,
+  phillips32,
+  phillips33,
+  phillips34,
+  phillips35,
+  phillips36,
 };
 export default stillShootImages;

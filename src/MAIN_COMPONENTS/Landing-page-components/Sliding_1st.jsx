@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import {useEffect, useRef} from 'react';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import scrollimg from '../../Images/LandingPage-Images/Scrolling-Image.webp';
@@ -42,7 +42,7 @@ export default function AboutUsSection () {
 
   return (
     <section className="w-full h-auto">
-      <div className="relative z-40 mx-auto mt-16 px-[100px] max-md:px-6 max-w-7xl">
+      <div className="z-40 relative mx-auto mt-16 px-[100px] max-md:px-6 max-w-7xl">
         {/* Sliding Image */}
         <div className="relative">
           <div
@@ -58,7 +58,7 @@ export default function AboutUsSection () {
         </div>
 
         {/* Text Section */}
-        <div className="relative top-52 max-md:-top-5 z-10 mt-20 max-md:mt-0 mb-28 pl-4 text-left">
+        <div className="top-52 max-md:-top-5 z-10 relative mt-20 max-md:mt-0 mb-28 pl-4 text-left">
           <h1 className="font-yeseva text-[75px] max-md:text-5xl leading-snug">
             <span className="text-black">Creativity</span>
             <span className="text-yellow"> Takes <br /> Courage.</span>

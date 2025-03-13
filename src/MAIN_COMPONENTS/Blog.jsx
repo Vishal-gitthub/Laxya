@@ -1,4 +1,3 @@
-import React from 'react';
 import blogHeader from '../Images/blog_images/Blogs-1536x864.webp';
 import blogImg1
   from '../Images/blog_images/Display-Advertising-Photos-1536x1024-blog1.webp';
@@ -39,12 +38,17 @@ export default function Blog () {
     },
   ];
   return (
-    <div className="bg-white">
-      <div className="bg-white w-full">
-        <img src={blogHeader} alt="" className="w-full object-cover" />
+    <div className="bg-white px-[90px] max-sm:px-4">
+      <div className="text-center">
+        <h1 className="font-yeseva text-[7.6vw] max-sm:text-[52px] max-md:text-[100px] leading-none">
+          <span className="pr-1 text-stroke text-transparent">OUR</span>
+          <span className="text-black">
+            BLOGS
+          </span>
+        </h1>
       </div>
       <div className="px-3 pt-20 pb-6">
-        <h1 className="py-3 font-medium font-roboto text-xl">Latest</h1>
+        <h1 className="py-3 font-roboto font-medium text-xl">Latest</h1>
         <hr className="border-2 border-black" />
         <div className="flex flex-wrap justify-center gap-4 pt-10">
           {blog.map ((data, index) => (
@@ -74,7 +78,7 @@ export default function Blog () {
 
       </div>
       <div className="px-3 pt-10 pb-6">
-        <h1 className="py-3 font-medium font-roboto text-xl">Trending</h1>
+        <h1 className="py-3 font-roboto font-medium text-xl">Trending</h1>
         <hr className="border-2 border-black" />
         <div className="flex flex-wrap justify-center gap-4 pt-10">
           {blog.map ((data, index) => (
