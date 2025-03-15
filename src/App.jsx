@@ -52,7 +52,7 @@ const App = () => {
   ); // Depend on location to trigger on route change
 
   return (
-    <main className="bg-black">
+    <main className="">
       <ScrollToTop />
       {isContentLoaded
         ? <Suspense fallback={<Loader />}>

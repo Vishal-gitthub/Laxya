@@ -22,17 +22,22 @@ const Navbar = () => {
   const links = [
     {name: 'HOME', path: '/'},
     {name: 'ABOUT', path: '/about'},
-    {
-      name: 'PROJECTS',
-      path: '/portfolio',
-      dropdown: [
-        {name: 'Still Shoot', path: '/still-shoot'},
-        {name: 'Film Shoot', path: '/film-shoot'},
-        {name: '3D Animation', path: '/portfolio/still-shoot'},
-        {name: 'Events', path: '/portfolio/still-shoot'},
-        {name: 'BTS', path: '/portfolio/still-shoot'},
-      ],
-    },
+    // {
+    //   name: 'PROJECTS',
+    //   path: '/portfolio',
+    //   dropdown: [
+    //     {name: 'Still Shoot', path: '/still-shoot'},
+    //     {name: 'Film Shoot', path: '/film-shoot'},
+    //     {name: '3D Animation', path: '/still-shoot'},
+    //     {name: 'Events', path: '/still-shoot'},
+    //     {name: 'BTS', path: '/still-shoot'},
+    //   ],
+    // },
+    {name: 'Still Shoot', path: '/still-shoot'},
+    {name: 'Film Shoot', path: '/film-shoot'},
+    {name: '3D Animation', path: '/still-shoot'},
+    {name: 'Events', path: '/still-shoot'},
+    {name: 'BTS', path: '/still-shoot'},
     {name: 'BLOGS', path: '/blog'},
     {name: 'TALENT REGISTRATION', path: '/talent'},
     {name: 'CONTACT', path: '/contact'},
@@ -42,16 +47,16 @@ const Navbar = () => {
 
   return (
     <header
-      className={`top-0 z-50 ${navbarVisible ? '-translate-y-0' : ' -translate-y-full'} fixed w-full transition-all duration-500 bg-white shadow-md`}
+      className={`top-0 z-50 ${navbarVisible ? ' bg-white' : 'bg-transparent text-white'} fixed w-full transition-all duration-500`}
     >
-      <nav className="flex justify-between items-center mx-auto px-4 py-0 container">
+      <nav className="flex justify-between items-center mx-auto px-4 py-0 text-whiteainer cont">
         {/* Logo */}
         <Link to="/">
           <img src={laxyaLogo} alt="Laxya Logo" className="max-w-[195px]" />
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden relative md:flex space-x-6 text-[15px]">
+        {/* <div className="hidden relative md:flex space-x-6 text-[15px]">
           {links.map (
             link =>
               link.dropdown
@@ -61,16 +66,23 @@ const Navbar = () => {
                     onMouseEnter={() => setDropdownVisible (true)}
                     onMouseLeave={() => setDropdownVisible (false)}
                   >
-                    <NavLink to={link.path} className="text-black">
+
+                    <NavLink
+                      to={link.path}
+                      className={`${navbarVisible ? 'text-black' : 'text-gray-600'}
+`}
+                    >
                       {link.name}
                     </NavLink>
                     {dropdownVisible &&
-                      <div className="top-full left-0 absolute bg-white shadow-md p-2 w-40">
+                      <div
+                        className={`top-full left-0 absolute shadow-md p-2 w-40  ${navbarVisible ? 'bg-white' : 'bg-transparent'}`}
+                      >
                         {link.dropdown.map (item => (
                           <Link
                             key={item.name}
                             to={item.path}
-                            className="block hover:bg-gray-200 px-4 py-2"
+                            className={`block hover:bg-gray-200 px-4 py-2 `}
                           >
                             {item.name}
                           </Link>
@@ -81,17 +93,17 @@ const Navbar = () => {
                     key={link.name}
                     to={link.path}
                     className={({isActive}) =>
-                      isActive ? 'text-yellow font-semibold' : 'text-black'}
+                      `hover:text-black ${navbarVisible ? 'text-black' : 'text-gray-600'} ${isActive ? 'text-yellow font-semibold' : ''}`}
                   >
                     {link.name}
                   </NavLink>
           )}
-        </div>
+        </div> */}
 
         {/* Hamburger Menu */}
         <button
           onClick={toggleMenu}
-          className="md:hidden p-2 border rounded"
+          className="p-2 border rounded"
           aria-expanded={visible}
         >
           <img
@@ -100,12 +112,11 @@ const Navbar = () => {
           />
         </button>
       </nav>
-
-      {/* Mobile Menu */}
+      {/* Menu - Visible on All Screens */}
       <div
-        className={`fixed inset-0 bg-white transition-all duration-300 md:hidden z-40 ${visible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}
+        className={`fixed inset-0 bg-white transition-all duration-300 z-40 ${visible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}
       >
-        <div className="flex justify-between items-center px-4 py-3 border-b">
+        <div className="flex justify-between items-center bg-white px-4 py-3 border-b">
           <img src={laxyaLogo} alt="Laxya Logo" className="max-w-[195px]" />
           <button
             onClick={toggleMenu}
@@ -116,7 +127,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className="flex flex-col items-start space-y-4 bg-white p-6 text-lg">
+        <div className="flex flex-col justify-center items-center space-y-4 bg-white p-6 text-2xl text-center">
           {links.map (
             link =>
               link.dropdown
@@ -127,7 +138,7 @@ const Navbar = () => {
                         key={item.name}
                         to={item.path}
                         onClick={() => setVisible (false)}
-                        className="block px-4 py-2 hover:text-yellow"
+                        className="block px-4 py-2 text-black hover:text-yellow"
                       >
                         {item.name}
                       </Link>
@@ -137,13 +148,14 @@ const Navbar = () => {
                     key={link.name}
                     to={link.path}
                     onClick={() => setVisible (false)}
-                    className="w-full text-black hover:text-yellow"
+                    className="w-full text-black hover:text-yellow uppercase"
                   >
                     {link.name}
                   </Link>
           )}
         </div>
       </div>
+
     </header>
   );
 };

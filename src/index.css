@@ -293,3 +293,23 @@
   z-index: 9999 !important;
   /* left: 0 !important; */
 }
+
+
+
+/* ---------------------gallery---------------- */
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+  padding: 0 20px;
+}
+
+.swiper-pagination-fraction {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+}

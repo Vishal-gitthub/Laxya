@@ -3,7 +3,7 @@ import logo from '../Images/Logos/laxya-white.png';
 
 export default function Footer () {
   return (
-    <div className="place-items-center grid-cols-1 bg-black py-[30px]">
+    <div className="place-items-center grid-cols-1 bg-black mt-5 py-[30px]">
       <div className="flex flex-col justify-center items-center max-w-[513px] font-roboto text-center">
         <div className="max-w-52">
           <img src={logo} alt="laxya" />
@@ -29,26 +29,26 @@ export default function Footer () {
         <div className="flex justify-center items-center gap-4 mt-[30px]">
           <a
             href="https://www.facebook.com/laxyaproductions/"
-            className="border-[#c0c0c75b] hover:border-yellow border w-[38px] h-[38px] group"
+            className="group border border-[#c0c0c75b] hover:border-yellow w-[38px] h-[38px]"
             target="_blank"
           >
             <i className="group-hover:text-yellow pt-[10px] text-white fa-brands fa-facebook-f" />
           </a>
           <a
             href="https://in.linkedin.com/company/laxyaproductions"
-            className="border-[#c0c0c75b] hover:border-yellow border w-[38px] h-[38px] group"
+            className="group border border-[#c0c0c75b] hover:border-yellow w-[38px] h-[38px]"
           >
             <i className="group-hover:text-yellow pt-[10px] text-white fa-brands fa-linkedin-in" />
           </a>
           <a
             href="https://www.instagram.com/laxya_productions/"
-            className="border-[#c0c0c75b] hover:border-yellow border w-[38px] h-[38px] group"
+            className="group border border-[#c0c0c75b] hover:border-yellow w-[38px] h-[38px]"
           >
             <i className="group-hover:text-yellow pt-[10px] text-white fa-brands fa-instagram" />
           </a>
           <a
             href="https://www.youtube.com/@laxyaproductions"
-            className="border-[#c0c0c75b] hover:border-yellow border w-[38px] h-[38px] group"
+            className="group border border-[#c0c0c75b] hover:border-yellow w-[38px] h-[38px]"
           >
             <i className="group-hover:text-yellow pt-[10px] text-white fa-brands fa-youtube" />
           </a>

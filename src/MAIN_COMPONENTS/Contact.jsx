@@ -75,8 +75,8 @@ export default function Contact () {
 
   console.log (formData);
   return (
-    <div className="bg-white font-roboto">
-      <div className="bg-[#f1f1f1] px-24 max-sm:px-6 max-md:px-12">
+    <div className="bg-white mt-40 font-roboto">
+      <div className="px-24 max-sm:px-6 max-md:px-12 py-11">
         <div className="text-center">
           <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
             <span className="pr-1 text-stroke text-transparent">CONTACT</span>

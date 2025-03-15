@@ -38,7 +38,7 @@ export default function Blog () {
     },
   ];
   return (
-    <div className="bg-white px-[90px] max-sm:px-4">
+    <div className="bg-white mt-40 px-[90px] max-sm:px-4">
       <div className="text-center">
         <h1 className="font-yeseva text-[7.6vw] max-sm:text-[52px] max-md:text-[100px] leading-none">
           <span className="pr-1 text-stroke text-transparent">OUR</span>
@@ -46,6 +46,9 @@ export default function Blog () {
             BLOGS
           </span>
         </h1>
+        <p className="text-[#c0c0c7] text-2xl">
+          Explore Laxya Productions' Latest Blogs, News, and Creative Insights
+        </p>
       </div>
       <div className="px-3 pt-20 pb-6">
         <h1 className="py-3 font-roboto font-medium text-xl">Latest</h1>

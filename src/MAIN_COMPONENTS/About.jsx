@@ -3,13 +3,13 @@ import aboutHeader from '../Images/AboutUs-images/AboutUsHeader.jpg';
 import TeamSlider from './About-page-components/TeamSlider';
 export default function About () {
   return (
-    <div className="bg-white h-auto">
+    <div className="bg-white mt-40 h-auto">
       {/* Header Image  */}
       {/* <div className="w-full h-full max-md:h-[55%]">
         <img src={aboutHeader} className="w-full object-cover" alt="" />
       </div> */}
       <div className="text-center">
-        <h1 className="px-20 max-sm:px-10 pt-10 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
+        <h1 className="px-20 max-sm:px-10 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
           <span className="pr-1 text-stroke text-transparent">ABOUT</span>
           US
         </h1>
@@ -17,14 +17,14 @@ export default function About () {
       {/* About Us Content  */}
       <section>
         <div className="max-sm:px-[10px] max-md:px-[45px] py-[30px] pt-[40px] font-roboto font-normal text-[#C0C0C7] text-lg">
-          <p className="px-[120px]">
+          <p className="px-[120px] max-sm:px-2">
 
             Welcome to Laxya Productions, a well-known production house based in Ghitorni, Delhi, famous for its creativity since 1995. With a history of over 27 years, we've become a leading name in advertising and fashion, consistently delivering impressive content that goes beyond expectations.
           </p>
           <br />
           <TeamSlider />
           <br />
-          <p className="px-[120px]">
+          <p className="px-[120px] max-sm:px-2">
 
             Over the years we have worked with clients like Samsung, Mountain Dew, Eicher, Suzuki, Adidas, BBC, Voltas, Reebok, Yamaha, and many more brands that you see in your day to day life to bring their vision to reality. At Laxya Productions, our team is a mix of dedicated professionals, each focused on achieving excellence. Fueled by creativity and a drive for perfection, we turn ideas into reality with a touch of magic. Over the years we have worked with clients like Samsung, Mountain Dew, Eicher, Suzuki, Adidas, BBC, Voltas, Reebok, Yamaha, and many more brands that you see in your day to day life to bring their vision to reality. We've partnered with top agencies like Ogilvy, and respected brands like Honda, Samsung, Yamaha etc. in achieving many successes and satisfied clients. From corporate videos to film productions, we've mastered various visual, digital, and print media formats, solidifying our reputation as one of Delhi's best production houses. Come explore our world and join us on a journey of creativity and quality.
           </p>

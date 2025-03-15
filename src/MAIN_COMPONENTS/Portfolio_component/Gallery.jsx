@@ -55,7 +55,7 @@ const Gallery = () => {
   const navigate = useNavigate ();
   return (
     <div className="bg-white">
-      <div className="gap-0 columns-3">
+      <div className="gap-0 columns-1 sm:columns-1 md:columns-3 lg:columns-3 xl:columns-3">
         {images.map (img => (
           <div
             key={img.id}

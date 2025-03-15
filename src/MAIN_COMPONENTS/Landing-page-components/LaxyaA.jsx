@@ -12,10 +12,10 @@ const LaxyaA = () => {
   return (
     <a
       href="https://laxya.net/"
-      className="bg-[#ececec] p-[10px] group loadingChild"
+      className="group bg-gray-50 p-[10px] loadingChild"
     >
       <section className="pb-16">
-        <div className="group-hover:scale-[0.98] max-md:w-full max-w-[500px] h-[360px] transition-all duration-500">
+        <div className="max-md:w-full max-w-[500px] h-[360px] group-hover:scale-[0.98] transition-all duration-500">
           <Swiper
             navigation={true}
             autoplay={{ delay: 2300, disableOnInteraction: false }}
@@ -29,7 +29,7 @@ const LaxyaA = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="bg-yellow p-4 font-roboto font-semibold text-[#222222] text-[22px] text-left">
+          <div className="p-4 font-roboto font-semibold text-[#222222] text-[22px] text-left">
             <h1>Laxya Studio-A</h1>
           </div>
         </div>

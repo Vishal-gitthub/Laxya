@@ -1,6 +1,12 @@
 import {useParams} from 'react-router-dom';
 import stillShootImages from './StillShootImageImports';
 import {useState} from 'react';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Navigation, Pagination} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 const imageSets = {
   1: [
     stillShootImages.adidas10,
@@ -376,7 +382,7 @@ const imageSets = {
 function ImagePage () {
   const {id} = useParams ();
   const images = imageSets[Number (id)] || [];
-  const [selectedImage, setSelectedImage] = useState (null);
+  const [selectedIndex, setSelectedIndex] = useState (null);
 
   return (
     <div className="gap-0 columns-1 sm:columns-2 md:columns-3 lg:columns-3 bg-white bg-repeat-round">
@@ -386,29 +392,51 @@ function ImagePage () {
               <img
                 key={index}
                 src={image}
-                className="z-10 sticky"
+                className="z-10 sticky cursor-pointer"
                 alt={`Image ${index}`}
-                onClick={() => setSelectedImage (image)}
+                onClick={() => setSelectedIndex (index)}
               />
             ))}
           </div>
         : <p>Image not found</p>}
 
-      {selectedImage &&
+      {selectedIndex !== null &&
         <div
-          className="z-50 fixed inset-0 flex justify-center items-center bg-black"
-          onClick={() => setSelectedImage (null)}
+          className="z-50 fixed inset-0 flex justify-center items-center bg-black bg-opacity-90"
+          onClick={() => setSelectedIndex (null)}
         >
-          <img
-            src={selectedImage}
-            alt="Selected"
-            className="max-w-full max-h-full"
+          <div
+            className="flex justify-center items-center w-full h-screen"
             onClick={e => e.stopPropagation ()}
-          />
-          <button
-            className="top-4 right-4 absolute text-white text-3xl"
-            onClick={() => setSelectedImage (null)}
-          />
+          >
+            <Swiper
+              navigation
+              pagination={{type: 'fraction'}}
+              modules={[Navigation, Pagination]}
+              initialSlide={selectedIndex}
+              className="w-full h-full"
+              style={{maxWidth: '100%', height: 'auto'}}
+            >
+              {images.map ((image, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="flex justify-center items-center"
+                >
+                  <img
+                    src={image}
+                    alt={`Slide ${index}`}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <button
+              className="top-4 right-4 z-50 absolute text-white text-3xl"
+              onClick={() => setSelectedIndex (null)}
+            >
+              x
+            </button>
+          </div>
         </div>}
     </div>
   );

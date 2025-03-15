@@ -10,15 +10,15 @@ const stillShoot = [
 ];
 export default function FilmShoot () {
   return (
-    <section className="bg-white">
+    <section className="bg-white pt-40">
       {/* <div className="mb-[30px] w-full">
         <img src={portfolioHeader} alt="" className="w-full object-cover" />
       </div> */}
-      <div className="flex flex-wrap justify-center items-center gap-5 px-[75px] max-sm:px-3 py-5">
+      <div className="flex flex-wrap justify-center items-center gap-1 px-[75px] max-sm:px-3 py-5">
         {stillShoot.map ((data, index) => (
           <div
             key={index}
-            className="group bg-[#ececec] mx-4 p-[7px] w-full sm:w-[300px] lg:w-[45%] h-[400px] overflow-hiden loadingChild"
+            className="group bg-[#ececec] mx- p-[7px] w-full sm:w-[300px] lg:w-[45%] h-[400px] overflow-hiden loadingChild"
           >
             <div className="w-full h-full group-hover:scale-95 transition-all duration-500">
               <iframe
