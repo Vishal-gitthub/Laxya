@@ -55,6 +55,15 @@ const Gallery = () => {
   const navigate = useNavigate ();
   return (
     <div className="bg-white">
+      <div className="pt-28 pb-2 text-center">
+        <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
+          <span className="pr-1 text-stroke text-transparent">PROJECTS</span>
+          <span className="text-yellow">GALLERY</span>
+        </h1>
+        <p className="text-[#c0c0c7] text-2xl">
+          Here are some of the clients we've worked with.
+        </p>
+      </div>
       <div className="gap-0 columns-1 sm:columns-1 md:columns-3 lg:columns-3 xl:columns-3">
         {images.map (img => (
           <div

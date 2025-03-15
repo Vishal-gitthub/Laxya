@@ -1,4 +1,4 @@
-import {useEffect, useRef} from 'react';
+import {useRef} from 'react';
 
 import Three_d from '../Images/LandingPage-Images/3d.webp';
 import production from '../Images/LandingPage-Images/production-img.webp';
@@ -29,11 +29,11 @@ import AqubeStudio from './Landing-page-components/AqubeStudio';
 import FillMeStudio from './Landing-page-components/Fillme_Studio';
 import LaxyaA from './Landing-page-components/LaxyaA';
 import LaxyaB from './Landing-page-components/LaxyaB';
-import Sliding from './Landing-page-components/Sliding';
-import ExperienceCarousel from './Landing-page-components/FrontSlider';
+// import Sliding from './Landing-page-components/Sliding';
+// import ExperienceCarousel from './Landing-page-components/FrontSlider';
 import {Link} from 'react-router-dom';
-import Sliding_1st from './Landing-page-components/Sliding_1st';
-import Project from './Landing-page-components/Project';
+// import Sliding_1st from './Landing-page-components/Sliding_1st';
+// import Project from './Landing-page-components/Project';
 
 // images of team
 import kkbatra from '../Images/AboutUs-images/TeamMemberImage/kk_batra.webp';
@@ -55,8 +55,8 @@ const Landing = () => {
     {image: stillShootThumbnail, name: 'STILL SHOOTS', to: '/still-shoot'},
     {image: filmShootThumbnail, name: 'FILM SHOOTS', to: '/film-shoot'},
     {image: d3_Thumbnail, name: '3D ANIMATION', to: '/film-shoot'},
-    {image: bts_Thumbnail, name: 'BTS', to: '/bts'},
-    {image: events_Thumbnail, name: 'EVENTS', to: '/events'},
+    {image: bts_Thumbnail, name: 'BTS', to: '/film-shoot'},
+    {image: events_Thumbnail, name: 'EVENTS', to: '/film-shoot'},
   ];
   const teamMembers = [
     {name: ' AVENISH DABRAL', role: 'MANAGING DIRECTOR & FOUNDER', img: avnish},
@@ -138,10 +138,12 @@ const Landing = () => {
       </div> */}
         <section className="mx-[90px] max-sm:mx-[10px] max-md:mx-[45px] py-5">
           <div>
-            <div className="text-center">
-              <h1 className="font-yeseva text-[7.6vw] max-sm:text-[52px] max-md:text-[100px] leading-none">
-                <span className="text-stroke text-transparent">OUR</span>
-                PROJECTS
+            <div className="pl-5 text-left">
+              <h1 className="font-yeseva text-[152px] text-black max-sm:text-[52px] max-md:text-[100px]">
+                our
+                <span className="text-stroke-yellow text-transparent">
+                  projects
+                </span>
               </h1>
             </div>
           </div>
@@ -214,8 +216,8 @@ const Landing = () => {
                 studios
               </span>
             </h1>
-            <p className="mx-28 max-sm:mx-3 max-md:mx-14 font-roboto font-medium text-[#c0c5d7] text-lg">
-              Whether you're in search of a film production house in Delhi or
+            <p className="mx-20 max-sm:mx-3 max-md:mx-14 font-roboto font-medium text-[#c0c5d7] text-lg">
+              Whether you&apos;re in search of a film production house in Delhi or
               corporate video makers in Delhi, our studios offer the perfect
               setting to bring your creative vision to life.
             </p>

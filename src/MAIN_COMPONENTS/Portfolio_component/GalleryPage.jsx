@@ -379,7 +379,7 @@ function ImagePage () {
   const [selectedImage, setSelectedImage] = useState (null);
 
   return (
-    <div className="gap-0 columns-1 sm:columns-2 md:columns-3 lg:columns-3 bg-white bg-repeat-round">
+    <div className="gap-0 columns-1 sm:columns-2 md:columns-3 lg:columns-3 bg-white bg-repeat-round pt-28">
       {images.length > 0
         ? <div>
             {images.map ((image, index) => (
