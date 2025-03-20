@@ -40,11 +40,11 @@ export default function Blog () {
   return (
     <div className="bg-white mt-40 px-[90px] max-sm:px-4">
       <div className="text-center">
-        <h1 className="font-yeseva text-[7.6vw] max-sm:text-[52px] max-md:text-[100px] leading-none">
-          <span className="pr-1 text-stroke text-transparent">OUR</span>
-          <span className="text-black">
-            BLOGS
+        <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
+          <span className="pr-1 text-stroke text-transparent">
+           Our
           </span>
+          <span className="text-yellow">blogs</span>
         </h1>
         <p className="text-[#c0c0c7] text-2xl">
           Explore Laxya Productions' Latest Blogs, News, and Creative Insights

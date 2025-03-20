@@ -22,7 +22,7 @@ const Test = () => {
             <span>Y</span>
             <span>A</span>
           </h1> */}
-          <div className='-ml-6'>
+          <div className="-ml-6">
             <img src={logoWhite} alt="" />
           </div>
           <h2 className="inline-block pt-28 pl-2 w-max max-sm:text-3xl max-md:text-6xl text-8xl max-md:text-center text-start tracking-[8px]">

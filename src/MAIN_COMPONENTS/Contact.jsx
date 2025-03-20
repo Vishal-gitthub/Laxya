@@ -75,18 +75,18 @@ export default function Contact () {
 
   console.log (formData);
   return (
-    <div className="bg-white mt-40 font-roboto">
+    <div className="bg-white mt-40">
       <div className="px-24 max-sm:px-6 max-md:px-12 py-11">
         <div className="text-center">
           <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
-            <span className="pr-1 text-stroke text-transparent">CONTACT</span>
-            <span className="text-yellow">US</span>
+            <span className="pr-1 text-stroke text-transparent">Contact</span>
+            <span className="text-yellow">us</span>
           </h1>
         </div>
         <div className="flex justify-between items-center gap-[60px] bg-white shadow-xl max-sm:px-[25px] max-md:px-[50px] py-[90px] pl-[100px] rounded-[25px]">
           <form onSubmit={handleSubmit}>
             <div>
-              <h1 className="font-roboto font-black text-[#222222] text-4xl">
+              <h1 className="font-black text-[#222222] text-4xl">
                 We’re Just a Message Away
               </h1>
               <p className="py-5 text-[#c0c0c7] text-[18px]">

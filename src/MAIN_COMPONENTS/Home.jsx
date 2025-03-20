@@ -12,6 +12,7 @@ import location from '../Images/LandingPage-Images/location.webp';
 import post_production from '../Images/LandingPage-Images/post-production.webp';
 
 import filmMaking from '../Images/LandingPage-Images/film makeing.webp';
+import setDesign from '../Images/LandingPage-Images/Set Design.jpg';
 
 // import filmShoot from '../Images/LandingPage-Images/filmShoot.jpg';
 // import stillShoot from '../Images/LandingPage-Images/stillShoot.jpg';
@@ -50,13 +51,14 @@ const Landing = () => {
     {Image: location, name: 'Location'},
     {Image: filmMaking, name: 'Post-Production'},
     {Image: post_production, name: 'Film Making'},
+    {Image: setDesign, name: 'Set Design'},
   ];
   const portfolioImages = [
     {image: stillShootThumbnail, name: 'STILL SHOOTS', to: '/still-shoot'},
     {image: filmShootThumbnail, name: 'FILM SHOOTS', to: '/film-shoot'},
-    {image: d3_Thumbnail, name: '3D ANIMATION', to: '/film-shoot'},
-    {image: bts_Thumbnail, name: 'BTS', to: '/film-shoot'},
-    {image: events_Thumbnail, name: 'EVENTS', to: '/film-shoot'},
+    {image: d3_Thumbnail, name: '3D ANIMATION', to: '/3d-animation'},
+    {image: bts_Thumbnail, name: 'BTS', to: '/bts'},
+    {image: events_Thumbnail, name: 'EVENTS', to: '/events'},
   ];
   const teamMembers = [
     {name: ' AVENISH DABRAL', role: 'MANAGING DIRECTOR & FOUNDER', img: avnish},
@@ -79,8 +81,8 @@ const Landing = () => {
         <ExperienceCarousel />
       </div> */}
       <section>
-        <div className="w-full">
-          <video autoPlay loop muted className="w-full">
+        <div className="w-full h-screen">
+          <video autoPlay loop muted className="w-full h-full object-cover">
             <source src={showReel} />
           </video>
         </div>
@@ -98,35 +100,38 @@ const Landing = () => {
       <ImageSlider />
 
       {/* Services Section  */}
-      <section className="m-auto px-5 max-sm:px-4 max-md:px-8 pt-40 max-w-7xl">
-        <div className="bg-black mx-auto px-[20.5px] max-sm:px-3 rounded-3xl">
-          <div>
-            <h1 className="font-yeseva text-[142px] text-white max-sm:text-[52px] max-md:text-[100px]">
-              serv
+      <section className="m-auto px-5 max-sm:px-4 max-md:px-8 pt-40">
+        <div className="">
+          <div className="pl-28 max-sm:pl-2 max-md:pl-12">
+            <h1 className="font-yeseva text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
+              Serv
               <span className="text-stroke-yellow text-transparent">ices</span>
             </h1>
           </div>
 
           {/* Service Grid */}
-          <div className="place-items-center gap-y-5 grid grid-cols-4 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 pb-20">
+          {/* place-items-center gap-1 max-sm:gap-3 grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 p-4 w-full h-full origin-center */}
+
+          <div className="gap-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 m-auto p-1 max-w-7xl">
             {ServicesImage.map ((service, index) => (
               <div
                 key={index}
-                className="group bg-[#ececec] rounded-xl w-64 max-sm:w-full h-40 overflow-hidden hover:scale-105 transition-all duration-500 loadingChild"
+                className="group bg-[#ececec] hover:border w-full h-52 overflow-hidden transition-all duration-500"
               >
                 <div className="relative w-full h-full">
                   <img
                     src={service.Image}
                     alt={service.name}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-full object-cover"
                   />
-                  <h2 className="top-1/2 left-1/2 absolute flex justify-center items-center bg-black/30 w-full h-full font-semibold text-white text-3xl text-center -translate-x-1/2 -translate-y-1/2">
+                  <h2 className="absolute inset-0 flex justify-center items-center bg-black/30 font-semibold text-white text-3xl text-center">
                     {service.name}
                   </h2>
                 </div>
               </div>
             ))}
           </div>
+      
         </div>
       </section>
 
@@ -136,22 +141,23 @@ const Landing = () => {
         {/* <div className="mb-[30px] w-full">
         <img src={portfolioHeader} alt="" className="w-full object-cover" />
       </div> */}
-        <section className="mx-[90px] max-sm:mx-[10px] max-md:mx-[45px] py-5">
+        <section className="mx-[90px] max-sm:mx-[0px] max-md:mx-[45px] px-5 py-5">
           <div>
-            <div className="pl-5 text-left">
-              <h1 className="font-yeseva text-[152px] text-black max-sm:text-[52px] max-md:text-[100px]">
-                our
+            <div className="pl-5 max-sm:pl-0 text-left">
+              <h1 className="font-yeseva text-[140px] text-black max-sm:text-[52px] max-md:text-[100px]">
+                Pro
                 <span className="text-stroke-yellow text-transparent">
-                  projects
+                  jects
                 </span>
               </h1>
             </div>
           </div>
-          <div className="pt-14">
-            <div className="flex flex-wrap justify-center items-center gap-1">
+
+          <div className="pt-2">
+            <div className="flex flex-wrap flex-auto justify-center items-center gap-1">
               {portfolioImages.map ((data, index) => (
                 <Link to={data.to} key={index} className="group bg-[#ececec]">
-                  <div className="group relative w-96 h-full group-hover:scale-95 transition-all duration-500">
+                  <div className="group relative w-[27rem] max-sm:w-full h-full group-hover:scale-95 transition-all duration-500">
                     <video
                       ref={videoRef}
                       className="max-w-full max-h-full object-contain"
@@ -168,7 +174,7 @@ const Landing = () => {
                       Your browser does not support the video tag.
                     </video>
                     {/* <img src={data.image} className="w-full h-full" alt="" /> */}
-                    <h1 className="group-hover:bg-black/30 absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 w-full h-full font-semibold text-white text-3xl transition-all duration-300">
+                    <h1 className="absolute inset-0 flex justify-center items-center bg-black/30 opacity-70 group-hover:opacity-100 w-full h-full font-semibold text-white text-3xl transition-all duration-300">
                       {data.name}
                     </h1>
                     {/* // style={{
@@ -199,7 +205,7 @@ const Landing = () => {
             Our Trusted
           </span>
           <div>
-            <h1 className="mb-10 font-yeseva text-[#222222] text-[152px] max-sm:text-[52px] max-md:text-[100px] leading-none">
+            <h1 className="mb-10 font-yeseva text-[#222222] text-[140px] max-sm:text-[40px] max-md:text-[100px] leading-none">
               clie<span className="text-stroke text-transparent">nts</span>
             </h1>
           </div>
@@ -210,19 +216,19 @@ const Landing = () => {
       <section className="bg-white">
         <div className="px-[120px] max-sm:px-3 py-5">
           <div className="mb-[90px] text-black_custom max-sm:text-left">
-            <h1 className="font-yeseva text-[152px] text-black max-sm:text-[52px] max-md:text-[100px]">
-              our
+            <h1 className="font-yeseva text-[140px] text-black max-sm:text-[40px] max-md:text-[100px]">
+              Our
               <span className="text-stroke-yellow text-transparent">
                 studios
               </span>
             </h1>
-            <p className="mx-20 max-sm:mx-3 max-md:mx-14 font-roboto font-medium text-[#c0c5d7] text-lg">
+            <p className="mx-20 max-sm:mx-3 max-md:mx-14 font-medium text-[#75757c] text-lg">
               Whether you&apos;re in search of a film production house in Delhi or
               corporate video makers in Delhi, our studios offer the perfect
               setting to bring your creative vision to life.
             </p>
           </div>
-          <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-28">
+          <div className="gap-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-28">
             <AqubeStudio />
             <FillMeStudio />
             <LaxyaA />
@@ -232,7 +238,7 @@ const Landing = () => {
       </section>
       {/* About Us  */}
 
-      <section className="px-40">
+      <section className="px-40 max-sm:px-1">
 
         <section
           className="bg-gray-50 px-[120px] max-sm:px-3 py-5 rounded-3xl"
@@ -241,8 +247,8 @@ const Landing = () => {
             backgroundSize: '8px 8px',
           }}
         >
-          <h1 className="font-yeseva text-[152px] text-black max-sm:text-[52px] max-md:text-[100px]">
-            our
+          <h1 className="font-yeseva text-[140px] text-black max-sm:text-[40px] max-md:text-[100px]">
+            Our
             <span className="text-stroke-yellow text-transparent">team</span>
           </h1>
           <div className="gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mx-auto px-6 max-w-6xl">
@@ -253,10 +259,10 @@ const Landing = () => {
                   alt={member.name}
                   className="mx-auto border-4 border-yellow rounded-full w-32 h-32 object-cover"
                 />
-                <h3 className="mt-4 font-semibold text-gray-700 text-xl">
+                <h3 className="mt-4 font-semibold text-gray-700 text-lg">
                   {member.name}
                 </h3>
-                <p className="text-gray-500">{member.role}</p>
+                <p className="text-gray-500 text-sm">{member.role}</p>
               </div>
             ))}
           </div>

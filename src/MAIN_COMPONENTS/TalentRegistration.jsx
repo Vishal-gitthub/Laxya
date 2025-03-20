@@ -72,20 +72,22 @@ export default function TalentRegistration () {
   };
 
   return (
-    <div className="mt-40 overflow-x-hidden font-roboto">
+    <div className="mt-40 overflow-x-hidden">
       <div className="px-0 max-sm:px-6 max-md:px-12 py-16">
         <div className="mb-10">
           <h1 className="font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] text-center leading-none tracking-wide">
-            <span className="pr-1 text-stroke text-transparent">TALENT</span>
+            <span className="pr-1 text-stroke text-transparent">
+              Talent
+            </span>
             <span className="text-yellow">
-              REGISTRATION
+              registration{' '}
             </span>
           </h1>
-          <p className="pl-20 max-sm:pl-2 text-[#c0c0c7] text-4xl text-left">
+          <p className="pt-4 pl-20 max-sm:pl-2 text-[#c0c0c7] text-4xl text-center">
             Welcome to talent registration
           </p>
         </div>
-        <div className="flex justify-center items-center gap-[60px] bg-white shadow-xl m-auto px-16 max-sm:px-[25px] max-md:px-[50px] py-[90px] max-sm:py-[30px] rounded-[25px] max-w-7xl">
+        <div className="flex justify-center items-center gap-[60px] bg-white shadow-xl m-auto px-16 max-sm:px-[25px] max-md:px-[50px] py-[50px] max-sm:py-[30px] rounded-[25px] max-w-7xl">
           <div>
             <h1 className="font-black text-[#222222] max-sm:text-2xl text-4xl">
               Elevate Your Talent Today
@@ -141,7 +143,7 @@ export default function TalentRegistration () {
               </div>
 
               <div className="mt-4">
-                <label className="block font-roboto text-[#c0c0c7]">
+                <label className="block text-[#c0c0c7]">
                   Profile (JPG, PNG, PDF)
                   <input
                     type="file"

@@ -25,7 +25,7 @@ export default function Portfolio () {
         <div>
           <div className="text-center">
             <h1 className="font-yeseva text-[7.6vw] max-sm:text-[52px] max-md:text-[100px] leading-none">
-              <span className="text-stroke text-transparent">OUR</span>PROJECTS
+              <span className="text-stroke text-transparent">Our</span>Projects
             </h1>
           </div>
         </div>

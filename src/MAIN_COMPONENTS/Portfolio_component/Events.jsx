@@ -1,5 +1,3 @@
-import portfolioHeader from '../../Images/portfolio_image/Portfolio.jpg';
-
 const stillShoot = [
   {image: 'https://www.youtube.com/embed/CA36qfQy4TU'},
   {image: 'https://www.youtube.com/embed/xuhUO0w9TQk'},
@@ -8,7 +6,7 @@ const stillShoot = [
   {image: 'https://www.youtube.com/embed/SQuMfcQig30'},
   {image: 'https://www.youtube.com/embed/2FOwkG8gJZQ'},
 ];
-export default function FilmShoot () {
+export default function Events () {
   return (
     <section className="bg-white pt-14">
       {/* <div className="mb-[30px] w-full">
@@ -17,12 +15,13 @@ export default function FilmShoot () {
       <div className="pt-28 pb-2 text-center">
         <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
           <span className="pr-1 text-stroke text-transparent">
-            Film
+            Eve
           </span>
-          <span className="text-yellow">shoots</span>
+          <span className="text-yellow">nts</span>
         </h1>
         <p className="m-auto max-w-6xl text-[#c0c0c7] text-2xl">
-          Discover the films shot by Laxya Production, bringing stories to life with stunning visuals and expert craftsmanship.
+          Experience the unforgettable events by Laxya Production, where stunning visuals and expert craftsmanship bring every moment to life.
+          {' '}
         </p>
       </div>
       <div className="flex flex-wrap justify-center items-center gap-1 px-[75px] max-sm:px-3 py-5">

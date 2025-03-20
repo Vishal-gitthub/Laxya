@@ -40,12 +40,12 @@ const ImageSlider = () => {
   const infiniteImages = [...images, ...images];
 
   return (
-    <section className="relative w-full h-[120px] overflow-hidden slider-container">
-      <div className="flex w-[calc(200%)] animate-scroll slider-content">
+    <section className="relative w-full overflow-hidden slider-container">
+      <div className="flex animate-scroll slider-content">
         {infiniteImages.map ((image, index) => (
           <div
             key={index}
-            className="group flex-shrink-0 bg-white p-[20px] border-[#d4d4d4] rounded-md w-[200px] h-[100px] slider-item"
+            className="group flex-shrink-0 bg-white p-[20px] border-[#d4d4d4] rounded-md w-[200px] h-[200px] slider-item"
           >
             <img
               src={image}

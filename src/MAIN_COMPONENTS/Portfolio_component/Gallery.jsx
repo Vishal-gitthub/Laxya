@@ -57,8 +57,8 @@ const Gallery = () => {
     <div className="bg-white">
       <div className="pt-28 pb-2 text-center">
         <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
-          <span className="pr-1 text-stroke text-transparent">PROJECTS</span>
-          <span className="text-yellow">GALLERY</span>
+          <span className="pr-1 text-stroke text-transparent">Projects</span>
+          <span className="text-yellow">gallery</span>
         </h1>
         <p className="text-[#c0c0c7] text-2xl">
           Here are some of the clients we've worked with.
@@ -78,7 +78,7 @@ const Gallery = () => {
                 style={{cursor: 'pointer'}}
               />
             </div>
-            <div className="group-hover:bg-black/40 absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 rounded-sm w-full h-full font-bold text-gray-200 text-3xl scale-50 group-hover:scale-100 transition-all duration-300">
+            <div className="absolute inset-0 flex justify-center items-center group-hover:bg-black/40 opacity-0 group-hover:opacity-100 rounded-sm w-full h-full font-bold text-gray-200 text-3xl scale-50 group-hover:scale-100 transition-all duration-300">
               {img.text}
             </div>
           </div>

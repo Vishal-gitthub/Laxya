@@ -7,18 +7,23 @@ import laxya1 from '../../Images/LandingPage-Images/LaxyaA/laxya1.webp';
 import laxya4 from '../../Images/LandingPage-Images/LaxyaA/laxya4.webp';
 import laxya2 from '../../Images/LandingPage-Images/LaxyaA/laxya2.webp';
 const laxyaImage = [laxya1, laxya2, laxya3, laxya4, laxya5];
-
+import {useState} from 'react';
 const LaxyaB = () => {
+  const [isModalOpen, setIsModalOpen] = useState (false);
+
   return (
-    <a
-      href="https://laxya.net/"
-      className="group bg-gray-50 p-[10px] loadingChild"
-    >
+    <div>
       <section className="pb-16">
-        <div className="max-md:w-full max-w-[500px] h-[360px] group-hover:scale-[0.98] transition-all duration-500">
+        <div
+          onClick={() => setIsModalOpen (true)}
+          className="max-md:w-full max-w-full h-[360px] group-hover:scale-[0.98] transition-all duration-500"
+        >
           <Swiper
             navigation={true}
-            autoplay={{delay: 2400, disableOnInteraction: false}}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
             loop={true}
             modules={[Navigation, Autoplay]}
             className="mySwiper"
@@ -30,11 +35,54 @@ const LaxyaB = () => {
             ))}
           </Swiper>
           <div className="p-4 font-roboto font-semibold text-[#222222] text-[22px] text-left">
-            <h1>Laxya Studio-B</h1>
+            <h1>Laxya B Studio</h1>
           </div>
         </div>
       </section>
-    </a>
+      {isModalOpen &&
+        <div
+          className="z-50 fixed inset-0 flex justify-center items-center bg-black py-10 w-full"
+          onClick={() => setIsModalOpen (false)}
+        >
+          <div
+            className="relative bg-black py-10 rounded-lg w-full max-w-3xl"
+            onClick={e => e.stopPropagation ()}
+          >
+            <button
+              className="top-0 right-0 z-[51] absolute p-2 font-bold text-white text-2xl"
+              onClick={() => setIsModalOpen (false)}
+            >
+              Close
+            </button>
+            <Swiper
+              navigation={true}
+              autoplay={{
+                delay: 2200,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              modules={[Navigation, Autoplay]}
+              className="w-full h-[500px]" // Set Swiper height
+            >
+              {laxyaImage.map ((data, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="flex justify-center items-center"
+                >
+                  <div className="flex justify-center items-center w-full h-[500px]">
+                    <img
+                      src={data}
+                      alt=""
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+          </div>
+        </div>}
+    </div>
   );
 };
 
