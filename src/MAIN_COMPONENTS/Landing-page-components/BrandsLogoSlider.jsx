@@ -40,7 +40,16 @@ const ImageSlider = () => {
   const infiniteImages = [...images, ...images];
 
   return (
-    <section className="relative w-full overflow-hidden slider-container">
+    <section className="relative py-28 w-full overflow-hidden slider-container">
+      <div className="py-20">
+        <h1 className="max-sm:text-2xl text-4xl max-md:text-5xl text-center">
+          Over
+          <span className="font-serif font-semibold text-yellow text-7xl">
+            35+
+          </span>
+          Years of Excellence and Trust with the Brands.
+        </h1>
+      </div>
       <div className="flex animate-scroll slider-content">
         {infiniteImages.map ((image, index) => (
           <div

@@ -36,8 +36,9 @@ const Navbar = () => {
     {name: 'Still Shoot', path: '/still-shoot'},
     {name: 'Film Shoot', path: '/film-shoot'},
     {name: '3D Animation', path: '/3d-animation'},
-    {name: 'Events', path: '/events'},
+    // {name: 'Events', path: '/events'},
     {name: 'BTS', path: '/bts'},
+    // {name: 'Product Shoot', path: '/product-shoot'},
     {name: 'BLOGS', path: '/blog'},
     {name: 'TALENT REGISTRATION', path: '/talent'},
     {name: 'CONTACT', path: '/contact'},
@@ -137,6 +138,7 @@ const Navbar = () => {
                       <Link
                         key={item.name}
                         to={item.path}
+                        preload="true"
                         onClick={() => setVisible (false)}
                         className="block px-4 py-2 text-black hover:text-yellow"
                       >
@@ -145,6 +147,7 @@ const Navbar = () => {
                     ))}
                   </div>
                 : <Link
+                    preload="true"
                     key={link.name}
                     to={link.path}
                     onClick={() => setVisible (false)}

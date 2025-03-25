@@ -9,9 +9,12 @@ export default function About () {
         <img src={aboutHeader} className="w-full object-cover" alt="" />
       </div> */}
       <div className="text-center">
-        <h1 className="px-20 max-sm:px-10 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
+        {/* <h1 className="px-20 max-sm:px-10 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
           <span className="pr-1 text-stroke text-transparent">About</span>
           <span className="text-yellow">us</span>
+        </h1> */}
+        <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
+          About us
         </h1>
       </div>
       {/* About Us Content  */}

@@ -1,49 +1,90 @@
-const stillShoot = [
-  {image: 'https://www.youtube.com/embed/CA36qfQy4TU'},
-  {image: 'https://www.youtube.com/embed/xuhUO0w9TQk'},
-  {image: 'https://www.youtube.com/embed/mxFYLDjBF4I'},
-  {image: 'https://www.youtube.com/embed/eyEnG7j86DU'},
-  {image: 'https://www.youtube.com/embed/SQuMfcQig30'},
-  {image: 'https://www.youtube.com/embed/2FOwkG8gJZQ'},
-];
+import {useState, useEffect} from 'react';
+
 export default function Events () {
+  const [videos, setVideos] = useState ([]);
+  const [loading, setLoading] = useState (true);
+  const [error, setError] = useState (null);
+
+  useEffect (
+    () => {
+      const fetchFilmShootVideos = async () => {
+        try {
+          const response = await fetch (
+            'https://gallery.laxya.net/wp-json/custom/v1/videos'
+          );
+          if (!response.ok) {
+            throw new Error ('Failed to fetch videos');
+          }
+          const data = await response.json ();
+          setVideos (data.events || []);
+          setLoading (false);
+        } catch (err) {
+          setError (err.message);
+          setLoading (false);
+        }
+      };
+
+      fetchFilmShootVideos ();
+    },
+    [videos]
+  );
+
+  if (loading) {
+    return (
+      <section className="bg-white pt-14">
+        <div className="flex justify-center items-center h-[400px]">
+          <p>Loading videos...</p>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className="bg-white pt-14">
+        <div className="flex justify-center items-center h-[400px]">
+          <p className="text-red-500">Error: {error}</p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="bg-white pt-14">
-      {/* <div className="mb-[30px] w-full">
-        <img src={portfolioHeader} alt="" className="w-full object-cover" />
-      </div> */}
       <div className="pt-28 pb-2 text-center">
-        <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
-          <span className="pr-1 text-stroke text-transparent">
-            Eve
-          </span>
-          <span className="text-yellow">nts</span>
+        <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
+          Events
         </h1>
         <p className="m-auto max-w-6xl text-[#c0c0c7] text-2xl">
           Experience the unforgettable events by Laxya Production, where stunning visuals and expert craftsmanship bring every moment to life.
           {' '}
         </p>
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-1 px-[75px] max-sm:px-3 py-5">
-        {stillShoot.map ((data, index) => (
-          <div
-            key={index}
-            className="group bg-[#ececec] mx- p-[7px] w-full sm:w-[300px] lg:w-[45%] h-[400px] overflow-hiden loadingChild"
-          >
-            <div className="w-full h-full group-hover:scale-95 transition-all duration-500">
-              <iframe
-                className="w-full h-full"
-                src={data.image}
-                title="KFC | IDCA, Men&#39;s Video, Yeh sunte nahi, sunaate hain!, KFC Kshamata, Motion Static"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
+
+      {videos.length > 0
+        ? <div className="flex flex-wrap justify-center items-center gap-1 px-[75px] max-sm:px-3 py-5">
+            {videos.map ((video, index) => (
+              <div
+                key={`${video.post_id}-${index}`}
+                className="group bg-[#ececec] mx- p-[7px] w-full sm:w-[300px] lg:w-[45%] h-[400px] overflow-hidden loadingChild"
+              >
+                <div className="w-full h-full group-hover:scale-95 transition-all duration-500">
+                  <iframe
+                    className="w-full h-full"
+                    src={video.embed_url}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        : <div className="flex justify-center items-center h-[200px]">
+            <p>No film shoot videos available yet.</p>
+          </div>}
     </section>
   );
 }

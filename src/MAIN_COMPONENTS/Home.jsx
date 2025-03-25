@@ -24,6 +24,7 @@ import filmShootThumbnail from '../Images/portfolio_image/film_shoot.mp4';
 import bts_Thumbnail from '../Images/portfolio_image/bts.mp4';
 import d3_Thumbnail from '../Images/portfolio_image/3d_animation.mp4';
 import events_Thumbnail from '../Images/portfolio_image/events.mp4';
+import productShoot from '../Images/portfolio_image/productShoots.mp4';
 
 import ImageSlider from './Landing-page-components/BrandsLogoSlider';
 import AqubeStudio from './Landing-page-components/AqubeStudio';
@@ -47,18 +48,19 @@ const Landing = () => {
     {Image: Three_d, name: '3D Animation'},
     {Image: production_design, name: 'Production Design'},
     {Image: talentAcquistion, name: 'Talent Acquisition'},
+    {Image: setDesign, name: 'Events'},
     {Image: studio, name: 'Studio'},
     {Image: location, name: 'Location'},
     {Image: filmMaking, name: 'Post-Production'},
     {Image: post_production, name: 'Film Making'},
-    {Image: setDesign, name: 'Set Design'},
   ];
   const portfolioImages = [
     {image: stillShootThumbnail, name: 'STILL SHOOTS', to: '/still-shoot'},
     {image: filmShootThumbnail, name: 'FILM SHOOTS', to: '/film-shoot'},
     {image: d3_Thumbnail, name: '3D ANIMATION', to: '/3d-animation'},
-    {image: bts_Thumbnail, name: 'BTS', to: '/bts'},
-    {image: events_Thumbnail, name: 'EVENTS', to: '/events'},
+    // {image: bts_Thumbnail, name: 'BTS', to: '/bts'},
+    // {image: events_Thumbnail, name: 'EVENTS', to: '/events'},
+    // {image: productShoot, name: 'PRODUCT SHOOTS', to: '/product-shoot'},
   ];
   const teamMembers = [
     {name: ' AVENISH DABRAL', role: 'MANAGING DIRECTOR & FOUNDER', img: avnish},
@@ -88,35 +90,76 @@ const Landing = () => {
         </div>
       </section>
 
-      <div className="py-20">
-        <h1 className="max-sm:text-2xl text-4xl max-md:text-5xl text-center">
-          Over
-          <span className="font-serif font-semibold text-yellow text-7xl">
-            {' '}35+{' '}
-          </span>
-          Years of Excellence and Trust with the Brands.
-        </h1>
+      {/* </Link> */}
+      {/* Portfolio Section  */}
+      <div className="bg-white mt-10">
+        {/* <div className="mb-[30px] w-full">
+        <img src={portfolioHeader} alt="" className="w-full object-cover" />
+      </div> */}
+        <section className="mx-[90px] max-sm:mx-[0px] max-md:mx-[45px] px-5 py-5">
+          <div>
+            <div className="pl-5 max-sm:pl-0 text-left">
+              {/* <h1 className="font-yeseva text-[140px] text-black max-sm:text-[52px] max-md:text-[100px]">
+                Pro
+                <span className="text-stroke-yellow text-transparent">
+                  jects
+                </span>
+              </h1> */}
+              <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
+                Projects
+              </h1>
+            </div>
+          </div>
+
+          <div className="pt-2">
+            <div className="gap-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full">
+              {portfolioImages.map ((data, index) => (
+                <Link to={data.to} key={index} className="group bg-[#ececec]">
+                  <div className="group relative w-full h-[80vh] group-hover:scale-95 transition-all duration-500">
+                    <video
+                      ref={videoRef}
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                    >
+                      <source src={data.image} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                    <h1 className="absolute inset-0 flex justify-center items-center bg-black/30 opacity-70 group-hover:opacity-100 w-full h-full font-semibold text-white text-lg sm:text-2xl md:text-3xl transition-all duration-300">
+                      {data.name}
+                    </h1>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+        </section>
+        {/* <Project /> */}
       </div>
-      <ImageSlider />
 
       {/* Services Section  */}
-      <section className="m-auto px-5 max-sm:px-4 max-md:px-8 pt-40">
+      <section className="mx-[90px] max-sm:mx-[0px] max-md:mx-[45px] px-5 py-5">
         <div className="">
-          <div className="pl-28 max-sm:pl-2 max-md:pl-12">
-            <h1 className="font-yeseva text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
+          <div className="pl-5 max-sm:pl-0 text-left">
+            {/* <h1 className="font-yeseva text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
               Serv
               <span className="text-stroke-yellow text-transparent">ices</span>
+            </h1> */}
+            <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px] text-left">
+              Services
             </h1>
           </div>
 
           {/* Service Grid */}
           {/* place-items-center gap-1 max-sm:gap-3 grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 p-4 w-full h-full origin-center */}
 
-          <div className="gap-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 m-auto p-1 max-w-7xl">
+          <div className="gap-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 m-auto p-1 w-full">
             {ServicesImage.map ((service, index) => (
               <div
                 key={index}
-                className="group bg-[#ececec] hover:border w-full h-52 overflow-hidden transition-all duration-500"
+                className="group bg-[#ececec] hover:border w-full h-[75vh] overflow-hidden transition-all duration-500"
               >
                 <div className="relative w-full h-full">
                   <img
@@ -131,69 +174,11 @@ const Landing = () => {
               </div>
             ))}
           </div>
-      
+
         </div>
       </section>
 
-      {/* </Link> */}
-      {/* Portfolio Section  */}
-      <div className="bg-white mt-40">
-        {/* <div className="mb-[30px] w-full">
-        <img src={portfolioHeader} alt="" className="w-full object-cover" />
-      </div> */}
-        <section className="mx-[90px] max-sm:mx-[0px] max-md:mx-[45px] px-5 py-5">
-          <div>
-            <div className="pl-5 max-sm:pl-0 text-left">
-              <h1 className="font-yeseva text-[140px] text-black max-sm:text-[52px] max-md:text-[100px]">
-                Pro
-                <span className="text-stroke-yellow text-transparent">
-                  jects
-                </span>
-              </h1>
-            </div>
-          </div>
-
-          <div className="pt-2">
-            <div className="flex flex-wrap flex-auto justify-center items-center gap-1">
-              {portfolioImages.map ((data, index) => (
-                <Link to={data.to} key={index} className="group bg-[#ececec]">
-                  <div className="group relative w-[27rem] max-sm:w-full h-full group-hover:scale-95 transition-all duration-500">
-                    <video
-                      ref={videoRef}
-                      className="max-w-full max-h-full object-contain"
-                      autoPlay
-                      // onMouseEnter={() => videoRef.current.autoPlay()}
-                      // onMouseLeave={() => {
-                      //   videoRef.current.pause ();
-                      //   videoRef.current.currentTime = 0;
-                      // }}
-                      muted
-                      loop
-                    >
-                      <source src={data.image} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                    {/* <img src={data.image} className="w-full h-full" alt="" /> */}
-                    <h1 className="absolute inset-0 flex justify-center items-center bg-black/30 opacity-70 group-hover:opacity-100 w-full h-full font-semibold text-white text-3xl transition-all duration-300">
-                      {data.name}
-                    </h1>
-                    {/* // style={{
-                  //   backgroundImage: `url(${data.image})`,
-                  //   backgroundSize: 'cover',
-                  //   backgroundRepeat: 'no-repeat',
-                  //   backgroundPosition: 'center',
-                  // }} */}
-                    {/* <div className="bg-yellow p-4 font-roboto font-semibold text-[#222222] text-[22px] text-left">
-                    <h1>{data.name}</h1>
-                  </div> */}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* <Project /> */}
-      </div>
+      <ImageSlider />
       {/* <section className="mb-9 max-sm:mb-12 max-md:mb-28 w-full h-[60vh] max-sm:h-auto max-md:h-auto">
         <Sliding_1st />
       </section> */}
@@ -216,11 +201,14 @@ const Landing = () => {
       <section className="bg-white">
         <div className="px-[120px] max-sm:px-3 py-5">
           <div className="mb-[90px] text-black_custom max-sm:text-left">
-            <h1 className="font-yeseva text-[140px] text-black max-sm:text-[40px] max-md:text-[100px]">
+            {/* <h1 className="font-yeseva text-[140px] text-black max-sm:text-[40px] max-md:text-[100px]">
               Our
               <span className="text-stroke-yellow text-transparent">
                 studios
               </span>
+            </h1> */}
+            <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
+              Studios
             </h1>
             <p className="mx-20 max-sm:mx-3 max-md:mx-14 font-medium text-[#75757c] text-lg">
               Whether you&apos;re in search of a film production house in Delhi or
@@ -238,7 +226,7 @@ const Landing = () => {
       </section>
       {/* About Us  */}
 
-      <section className="px-40 max-sm:px-1">
+      <section className="px-28 max-sm:px-1">
 
         <section
           className="bg-gray-50 px-[120px] max-sm:px-3 py-5 rounded-3xl"
@@ -247,9 +235,12 @@ const Landing = () => {
             backgroundSize: '8px 8px',
           }}
         >
-          <h1 className="font-yeseva text-[140px] text-black max-sm:text-[40px] max-md:text-[100px]">
+          {/* <h1 className="font-yeseva text-[140px] text-black max-sm:text-[40px] max-md:text-[100px]">
             Our
             <span className="text-stroke-yellow text-transparent">team</span>
+          </h1> */}
+          <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
+            Our Team
           </h1>
           <div className="gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mx-auto px-6 max-w-6xl">
             {teamMembers.map ((member, index) => (

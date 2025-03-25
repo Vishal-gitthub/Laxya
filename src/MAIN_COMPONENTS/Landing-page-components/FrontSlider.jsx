@@ -40,7 +40,7 @@ export default function ExperienceCarousel () {
           clickable: true,
           vertical: true,
           renderBullet: (index, className) =>
-            `<span class="${className} rotate-[270deg] text-[12px] font-roboto font-normal rounded-sm">0${index + 1}</span>`,
+            `<span class="${className} rotate-[270deg] text-[12px]  font-normal rounded-sm">0${index + 1}</span>`,
         }}
         // autoplay={{
         //   delay: 2000,

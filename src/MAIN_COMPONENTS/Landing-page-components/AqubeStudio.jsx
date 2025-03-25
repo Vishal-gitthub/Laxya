@@ -57,7 +57,7 @@ export default function AqubeStudioSlider () {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="p-4 font-roboto font-semibold text-[#222222] text-[22px] text-left">
+          <div className="p-4 font-semibold text-[#222222] text-[22px] text-left">
             <h1>Aqube Studio</h1>
           </div>
         </div>

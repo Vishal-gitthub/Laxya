@@ -1,87 +1,63 @@
-import stillShootImages from './StillShootImageImports';
+import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-
-const images = [
-  {id: 1, image: stillShootImages.adidas10, text: 'Adidas'},
-  {id: 2, image: stillShootImages.phillips1, text: 'Phillips'},
-  {id: 3, image: stillShootImages.suzuki1, text: 'Suzuki Gixxer'},
-  {id: 4, image: stillShootImages.suzukiSE5, text: 'Suzuki SE 125'},
-  {id: 5, image: stillShootImages.intruder1, text: 'Suzuki Intruder'},
-  {id: 6, image: stillShootImages.TvsRaider2, text: 'TVS Raider'},
-  {id: 7, image: stillShootImages.honda1, text: 'Honda City'},
-  {id: 8, image: stillShootImages.msNexa1, text: 'Maruti Suzuki Nexa'},
-  {id: 9, image: stillShootImages.MS_COY1, text: 'MS Colors Of Youth'},
-  {id: 10, image: stillShootImages.eicher1, text: 'Eicher'},
-  {id: 11, image: stillShootImages.appolo1, text: 'Appolo Tyres'},
-  {id: 12, image: stillShootImages.BBC1, text: 'BBC'},
-  {id: 13, image: stillShootImages.monster2, text: 'Monster Job'},
-  {id: 14, image: stillShootImages.ngc1, text: 'NGC'},
-  {id: 15, image: stillShootImages.Samsung1, text: 'Samsung'},
-  {id: 16, image: stillShootImages.nokia1, text: 'Nokia'},
-  {id: 17, image: stillShootImages.RedTape2, text: 'Red Tape'},
-  {id: 18, image: stillShootImages.Cc1, text: 'Crimsoune Club'},
-  {id: 19, image: stillShootImages.dew1, text: 'Mountain Dew'},
-  {id: 20, image: stillShootImages.pepsi1, text: 'Pepsi'},
-  {id: 21, image: stillShootImages.asuka1, text: 'Asuka'},
-  {
-    id: 22,
-    image: stillShootImages.bacardi1,
-    text: 'Bacardi',
-  },
-  {id: 23, image: stillShootImages.gravity1, text: 'Gravity'},
-  {id: 24, image: stillShootImages.mahou1, text: 'Mahou'},
-  {id: 25, image: stillShootImages.Oriflame, text: 'Oriflame'},
-  {id: 26, image: stillShootImages.reebok1, text: 'Reebok'},
-  {id: 27, image: stillShootImages.rs2, text: 'Royal Stag'},
-  {id: 28, image: stillShootImages.oriflame1, text: 'Oriflame'},
-  {
-    id: 29,
-    image: stillShootImages.rsMop1,
-    text: 'Royal Stag - Mark Of Purity',
-  },
-  {id: 30, image: stillShootImages.stellers1, text: 'Stellers'},
-  {id: 31, image: stillShootImages.Somany1, text: 'Somany'},
-  {id: 32, image: stillShootImages.sunday1, text: 'Sunday Designs'},
-  {id: 33, image: stillShootImages.teachers1, text: 'Teachers'},
-  {id: 34, image: stillShootImages.whiteHat1, text: 'White Hat Jr'},
-  {
-    id: 29,
-    image: stillShootImages.RoyalStagOccasion,
-    text: 'royal Stag Occasion',
-  },
-];
-
+import {Link} from 'react-router-dom';
 const Gallery = () => {
   const navigate = useNavigate ();
+  const [galleries, setGalleries] = useState ([]);
+  const [loading, setLoading] = useState (true);
+  const [error, setError] = useState (null);
+
+  useEffect (() => {
+    fetch ('https://gallery.laxya.net/wp-json/custom/v1/galleries')
+      .then (response => {
+        if (!response.ok) throw new Error ('Failed to fetch galleries');
+        return response.json ();
+      })
+      .then (data => {
+        setGalleries (data);
+        console.log (data);
+        setLoading (false);
+      })
+      .catch (err => {
+        setError (err.message);
+        setLoading (false);
+      });
+  }, []);
+
+  if (loading) return <div className="py-28 text-center">Loading...</div>;
+  if (error) return <div className="py-28 text-center">Error: {error}</div>;
+
   return (
     <div className="bg-white">
       <div className="pt-28 pb-2 text-center">
-        <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
-          <span className="pr-1 text-stroke text-transparent">Projects</span>
-          <span className="text-yellow">gallery</span>
+        <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
+          Projects gallery
         </h1>
         <p className="text-[#c0c0c7] text-2xl">
-          Here are some of the clients we've worked with.
+          Here are some of the clients we&apos;ve worked with.
         </p>
       </div>
       <div className="gap-0 columns-1 sm:columns-1 md:columns-3 lg:columns-3 xl:columns-3">
-        {images.map (img => (
-          <div
-            key={img.id}
+        {galleries.map ((gallery, index) => (
+          <ddiv
+            key={index}
             className="group relative w-full h-full"
-            onClick={() => navigate (`/gallery/image/${img.id}`)}
+            onClick={() =>
+              navigate (`/still-shoot/${gallery.title}`, {
+                state: {images: gallery.images},
+              })}
           >
             <div>
               <img
-                src={img.image} // Fix: Change img.src to img.image
-                alt={img.text} // Fix: Change img.alt to img.text
+                src={gallery.images[0]}
+                alt={gallery.title}
                 style={{cursor: 'pointer'}}
               />
             </div>
-            <div className="absolute inset-0 flex justify-center items-center group-hover:bg-black/40 opacity-0 group-hover:opacity-100 rounded-sm w-full h-full font-bold text-gray-200 text-3xl scale-50 group-hover:scale-100 transition-all duration-300">
-              {img.text}
+            <div className="absolute inset-0 flex justify-center items-center group-hover:bg-black/40 opacity-0 group-hover:opacity-100 rounded-sm w-full h-full font-bold text-gray-200 text-3xl uppercase scale-50 group-hover:scale-100 transition-all duration-300">
+              {gallery.title}
             </div>
-          </div>
+          </ddiv>
         ))}
       </div>
     </div>

@@ -24,8 +24,12 @@ export default function Portfolio () {
       <section className="mx-[90px] max-sm:mx-[10px] max-md:mx-[45px] py-5">
         <div>
           <div className="text-center">
-            <h1 className="font-yeseva text-[7.6vw] max-sm:text-[52px] max-md:text-[100px] leading-none">
+            {/* <h1 className="font-yeseva text-[7.6vw] max-sm:text-[52px] max-md:text-[100px] leading-none">
               <span className="text-stroke text-transparent">Our</span>Projects
+            </h1>
+             */}
+            <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
+              Our projects
             </h1>
           </div>
         </div>
@@ -43,7 +47,7 @@ export default function Portfolio () {
                     <source src={data.image} />
                   </video>
                   {/* <img src={data.image} className="w-full h-full" alt="" /> */}
-                  <h1 className="group-hover:bg-black/30 absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 w-full h-full font-semibold text-white text-3xl transition-all duration-300">
+                  <h1 className="absolute inset-0 flex justify-center items-center group-hover:bg-black/30 opacity-0 group-hover:opacity-100 w-full h-full font-semibold text-white text-3xl transition-all duration-300">
                     {data.name}
                   </h1>
                   {/* // style={{

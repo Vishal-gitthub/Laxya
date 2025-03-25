@@ -73,7 +73,7 @@ export default function FillMeStudioSlider () {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="p-4 font-roboto font-semibold text-[#222222] text-[22px] text-left">
+          <div className="p-4 font-semibold text-[#222222] text-[22px] text-left">
             <h1>Fillme Studio</h1>
           </div>
         </div>

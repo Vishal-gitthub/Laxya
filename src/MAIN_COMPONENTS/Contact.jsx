@@ -78,9 +78,12 @@ export default function Contact () {
     <div className="bg-white mt-40">
       <div className="px-24 max-sm:px-6 max-md:px-12 py-11">
         <div className="text-center">
-          <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
+          {/* <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
             <span className="pr-1 text-stroke text-transparent">Contact</span>
             <span className="text-yellow">us</span>
+          </h1> */}
+          <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
+            Contact us
           </h1>
         </div>
         <div className="flex justify-between items-center gap-[60px] bg-white shadow-xl max-sm:px-[25px] max-md:px-[50px] py-[90px] pl-[100px] rounded-[25px]">
