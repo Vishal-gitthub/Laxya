@@ -81,7 +81,7 @@ const App = () => {
               <Route path="/card" element={<CardModalWithCarousel />} />
               <Route path="/still-shoot" element={<Gallery />} />
               <Route path="/still-shoot/:id" element={<GalleryPage />} />
-              {/* <Route path="*" element={<NotFound />} /> */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
           </Suspense>
