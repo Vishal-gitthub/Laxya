@@ -26,7 +26,6 @@ import d3_Thumbnail from '../Images/portfolio_image/3d_animation.mp4';
 import events_Thumbnail from '../Images/portfolio_image/events.mp4';
 import productShoot from '../Images/portfolio_image/productShoots.mp4';
 
-import ImageSlider from './Landing-page-components/BrandsLogoSlider';
 import AqubeStudio from './Landing-page-components/AqubeStudio';
 import FillMeStudio from './Landing-page-components/Fillme_Studio';
 import LaxyaA from './Landing-page-components/LaxyaA';
@@ -48,7 +47,7 @@ const Landing = () => {
     {Image: Three_d, name: '3D Animation'},
     {Image: production_design, name: 'Production Design'},
     {Image: talentAcquistion, name: 'Talent Acquisition'},
-    {Image: setDesign, name: 'Events'},
+    // {Image: setDesign, name: 'Events'},
     {Image: studio, name: 'Studio'},
     {Image: location, name: 'Location'},
     {Image: filmMaking, name: 'Post-Production'},
@@ -92,13 +91,13 @@ const Landing = () => {
 
       {/* </Link> */}
       {/* Portfolio Section  */}
-      <div className="bg-white mt-10">
+      <div className="bg-white">
         {/* <div className="mb-[30px] w-full">
         <img src={portfolioHeader} alt="" className="w-full object-cover" />
       </div> */}
-        <section className="mx-[90px] max-sm:mx-[0px] max-md:mx-[45px] px-5 py-5">
+        <section className="mx-[90px] max-sm:mx-[0px] max-md:mx-[45px] px-5">
           <div>
-            <div className="pl-5 max-sm:pl-0 text-left">
+            <div className="max-sm:pl-0 text-left">
               {/* <h1 className="font-yeseva text-[140px] text-black max-sm:text-[52px] max-md:text-[100px]">
                 Pro
                 <span className="text-stroke-yellow text-transparent">
@@ -111,11 +110,11 @@ const Landing = () => {
             </div>
           </div>
 
-          <div className="pt-2">
+          <div className="">
             <div className="gap-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full">
               {portfolioImages.map ((data, index) => (
                 <Link to={data.to} key={index} className="group bg-[#ececec]">
-                  <div className="group relative w-full h-[80vh] group-hover:scale-95 transition-all duration-500">
+                  <div className="group relative w-full h-[60vh] group-hover:scale-95 transition-all duration-500">
                     <video
                       ref={videoRef}
                       className="w-full h-full object-cover"
@@ -140,7 +139,7 @@ const Landing = () => {
       </div>
 
       {/* Services Section  */}
-      <section className="mx-[90px] max-sm:mx-[0px] max-md:mx-[45px] px-5 py-5">
+      <section className="mx-[90px] max-sm:mx-[0px] max-md:mx-[45px] px-5">
         <div className="">
           <div className="pl-5 max-sm:pl-0 text-left">
             {/* <h1 className="font-yeseva text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
@@ -155,11 +154,11 @@ const Landing = () => {
           {/* Service Grid */}
           {/* place-items-center gap-1 max-sm:gap-3 grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 p-4 w-full h-full origin-center */}
 
-          <div className="gap-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 m-auto p-1 w-full">
+          <div className="gap-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 m-auto p-1 w-full">
             {ServicesImage.map ((service, index) => (
               <div
                 key={index}
-                className="group bg-[#ececec] hover:border w-full h-[75vh] overflow-hidden transition-all duration-500"
+                className="group bg-[#ececec] hover:border w-full h-[32.5vh] overflow-hidden transition-all duration-500"
               >
                 <div className="relative w-full h-full">
                   <img
@@ -178,7 +177,6 @@ const Landing = () => {
         </div>
       </section>
 
-      <ImageSlider />
       {/* <section className="mb-9 max-sm:mb-12 max-md:mb-28 w-full h-[60vh] max-sm:h-auto max-md:h-auto">
         <Sliding_1st />
       </section> */}
@@ -199,8 +197,8 @@ const Landing = () => {
 
       {/* Our Studios */}
       <section className="bg-white">
-        <div className="px-[120px] max-sm:px-3 py-5">
-          <div className="mb-[90px] text-black_custom max-sm:text-left">
+        <div className="px-[120px] max-sm:px-3">
+          <div className="text-black_custom max-sm:text-left">
             {/* <h1 className="font-yeseva text-[140px] text-black max-sm:text-[40px] max-md:text-[100px]">
               Our
               <span className="text-stroke-yellow text-transparent">
@@ -210,13 +208,13 @@ const Landing = () => {
             <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
               Studios
             </h1>
-            <p className="mx-20 max-sm:mx-3 max-md:mx-14 font-medium text-[#75757c] text-lg">
+            {/* <p className="mx-20 max-sm:mx-3 max-md:mx-14 font-medium text-[#75757c] text-lg">
               Whether you&apos;re in search of a film production house in Delhi or
               corporate video makers in Delhi, our studios offer the perfect
               setting to bring your creative vision to life.
-            </p>
+            </p> */}
           </div>
-          <div className="gap-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-28">
+          <div className="gap-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-28">
             <AqubeStudio />
             <FillMeStudio />
             <LaxyaA />

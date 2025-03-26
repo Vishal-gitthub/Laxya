@@ -50,14 +50,13 @@ export default function BTS () {
   }
 
   return (
-    <section className="bg-white pt-14">
-      <div className="pt-28 pb-2 text-center">
+    <section className="bg-white pt-6">
+      <div className="pt-16 pb-2 text-center">
         <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
           BTS
         </h1>
         <p className="text-[#c0c0c7] text-2xl">
           Go behind the scenes with Laxya Production, where expert craftsmanship and stunning visuals bring every story to life.
-          {' '}
         </p>
       </div>
 
@@ -83,7 +82,7 @@ export default function BTS () {
             ))}
           </div>
         : <div className="flex justify-center items-center h-[200px]">
-            <p>No film shoot videos available yet.</p>
+            <p>No bts videos available yet.</p>
           </div>}
     </section>
   );

@@ -83,7 +83,7 @@ export default function Events () {
             ))}
           </div>
         : <div className="flex justify-center items-center h-[200px]">
-            <p>No film shoot videos available yet.</p>
+            <p>No events videos available yet.</p>
           </div>}
     </section>
   );

@@ -40,7 +40,7 @@ const ImageSlider = () => {
   const infiniteImages = [...images, ...images];
 
   return (
-    <section className="relative py-28 w-full overflow-hidden slider-container">
+    <section className="relative pb-24 w-full overflow-hidden slider-container">
       <div className="py-20">
         <h1 className="max-sm:text-2xl text-4xl max-md:text-5xl text-center">
           Over
@@ -54,7 +54,7 @@ const ImageSlider = () => {
         {infiniteImages.map ((image, index) => (
           <div
             key={index}
-            className="group flex-shrink-0 bg-white p-[20px] border-[#d4d4d4] rounded-md w-[200px] h-[200px] slider-item"
+            className="group flex-shrink-0 bg-white p-[20px] border-[#d4d4d4] rounded-md w-[250px] h-[250px] slider-item"
           >
             <img
               src={image}

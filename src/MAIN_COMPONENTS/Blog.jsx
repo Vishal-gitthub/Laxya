@@ -38,7 +38,7 @@ export default function Blog () {
     },
   ];
   return (
-    <div className="bg-white mt-40 px-[90px] max-sm:px-4">
+    <div className="bg-white mt-16 px-[90px] max-sm:px-4">
       <div className="text-center">
         {/* <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
           <span className="pr-1 text-stroke text-transparent">
@@ -53,7 +53,7 @@ export default function Blog () {
           Explore Laxya Productions' Latest Blogs, News, and Creative Insights
         </p>
       </div>
-      <div className="px-3 pt-20 pb-6">
+      <div className="px-3 pt-5 pb-6">
         <h1 className="py-3 font-roboto font-medium text-xl">Latest</h1>
         <hr className="border-2 border-black" />
         <div className="flex flex-wrap justify-center gap-4 pt-10">

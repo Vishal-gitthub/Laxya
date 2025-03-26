@@ -72,7 +72,7 @@ export default function TalentRegistration () {
   };
 
   return (
-    <div className="mt-40 overflow-x-hidden">
+    <div className="mt-16 overflow-x-hidden">
       <div className="px-0 max-sm:px-6 max-md:px-12 py-16">
         <div className="mb-10">
           {/* <h1 className="font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] text-center leading-none tracking-wide">

@@ -50,8 +50,8 @@ export default function Animation3D () {
   }
 
   return (
-    <section className="bg-white pt-14">
-      <div className="pt-28 pb-2 text-center">
+    <section className="bg-white pt-6">
+      <div className="pt-16 pb-2 text-center">
         <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
           3D animation
         </h1>
@@ -82,7 +82,7 @@ export default function Animation3D () {
             ))}
           </div>
         : <div className="flex justify-center items-center h-[200px]">
-            <p>No film shoot videos available yet.</p>
+            <p>No 3D Animation videos available yet.</p>
           </div>}
     </section>
   );

@@ -75,8 +75,8 @@ export default function Contact () {
 
   console.log (formData);
   return (
-    <div className="bg-white mt-40">
-      <div className="px-24 max-sm:px-6 max-md:px-12 py-11">
+    <div className="bg-white mt-16">
+      <div className="px-24 max-sm:px-6 max-md:px-12 py-10">
         <div className="text-center">
           {/* <h1 className="px-20 max-md:px-3 py-5 font-yeseva text-[7.6vw] max-sm:text-[32px] max-md:text-[60px] leading-none tracking-wide">
             <span className="pr-1 text-stroke text-transparent">Contact</span>
@@ -195,7 +195,7 @@ export default function Contact () {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4368.09866655091!2d77.13163281464985!3d28.490571142132655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1ee09641bef%3A0x77de0cc8f025a2d!2sLAXYA%20PRODUCTIONS%20PVT.%20LTD.%20%26%20STUDIOS!5e0!3m2!1sen!2sin!4v1734344223881!5m2!1sen!2sin"
           width="100%"
-          height={400}
+          height={600}
           style={{border: 0}}
           allowFullScreen=""
           loading="lazy"

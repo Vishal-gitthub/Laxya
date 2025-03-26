@@ -36,10 +36,10 @@ export default function AqubeStudioSlider () {
 
   return (
     <div>
-      <section className="pb-16">
+      <section className="pb-12">
         <div
           onClick={() => setIsModalOpen (true)}
-          className="max-md:w-full max-w-full h-[360px] group-hover:scale-[0.98] transition-all duration-500"
+          className="max-md:w-full max-w-full h-[60vh] group-hover:scale-[0.98] transition-all duration-500"
         >
           <Swiper
             navigation={true}
@@ -57,25 +57,25 @@ export default function AqubeStudioSlider () {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="p-4 font-semibold text-[#222222] text-[22px] text-left">
+          <div className="p-2 font-semibold text-[#222222] text-left">
             <h1>Aqube Studio</h1>
           </div>
         </div>
       </section>
       {isModalOpen &&
         <div
-          className="z-50 fixed inset-0 flex justify-center items-center bg-black py-10 w-full"
+          className="z-50 fixed inset-0 flex justify-center items-center bg-white py-10 w-full"
           onClick={() => setIsModalOpen (false)}
         >
           <div
-            className="relative bg-black py-10 rounded-lg w-full max-w-3xl"
+            className="relative bg-white py-10 rounded-lg w-full max-w-3xl"
             onClick={e => e.stopPropagation ()}
           >
             <button
-              className="top-0 right-0 z-[51] absolute p-2 font-bold text-white text-2xl"
+              className="-top-4 -right-4 z-[51] absolute p-2 font-roboto font-bold text-black hover:text-yellow text-5xl"
               onClick={() => setIsModalOpen (false)}
             >
-              Close
+              X
             </button>
             <Swiper
               navigation={true}

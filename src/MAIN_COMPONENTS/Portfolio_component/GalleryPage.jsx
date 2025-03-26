@@ -45,7 +45,7 @@ function ImagePage() {
         <img
           key={index}
           src={image}
-          className="z-10 sticky cursor-pointer"
+          className="z-10 sticky p-2 cursor-pointer"
           alt={`Gallery item ${index}`}
           onClick={() => setSelectedIndex(index)}
         />

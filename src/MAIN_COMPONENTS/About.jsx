@@ -1,9 +1,8 @@
-import aboutHeader from '../Images/AboutUs-images/AboutUsHeader.jpg';
-
 import TeamSlider from './About-page-components/TeamSlider';
+import ImageSlider from './Landing-page-components/BrandsLogoSlider';
 export default function About () {
   return (
-    <div className="bg-white mt-40 h-auto">
+    <div className="bg-white mt-16 h-auto">
       {/* Header Image  */}
       {/* <div className="w-full h-full max-md:h-[55%]">
         <img src={aboutHeader} className="w-full object-cover" alt="" />
@@ -19,7 +18,7 @@ export default function About () {
       </div>
       {/* About Us Content  */}
       <section>
-        <div className="max-sm:px-[10px] max-md:px-[45px] py-[30px] pt-[40px] font-normal text-[#75757c] text-lg">
+        <div className="max-sm:px-[10px] max-md:px-[45px] py-[15px] pt-[15px] font-normal text-[#75757c] text-lg">
           <p className="px-[120px] max-sm:px-2">
 
             Welcome to Laxya Productions, a well-known production house based in Ghitorni, Delhi, famous for its creativity since 1995. With a history of over 27 years, we've become a leading name in advertising and fashion, consistently delivering impressive content that goes beyond expectations.
@@ -34,7 +33,7 @@ export default function About () {
 
         </div>
 
-        <div className="m-auto mb-16 w-[85%] max-sm:w-full">
+        <div className="m-auto my-14 w-[85%] max-sm:w-full">
           <div className="flex max-md:flex-col justify-center items-stretch">
             {/* First Container */}
             <div className="flex-1 bg-yellow p-[60px] w-2/4 max-md:w-full text-[#2E2E2E]">
@@ -60,7 +59,8 @@ export default function About () {
       </section>
 
       {/* Our Team */}
-      <section className="px-[100.5px] max-sm:px-8 py-[150px] text-center">
+      <ImageSlider />
+      {/* <section className="px-[100.5px] max-sm:px-8 py-[150px] text-center">
         <h1 className="font-black text-[#2e2e2e] text-[50px]">
           Step into the Laxya Experience
         </h1>
@@ -78,7 +78,7 @@ export default function About () {
             Get Started
           </button>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

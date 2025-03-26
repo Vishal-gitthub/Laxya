@@ -50,10 +50,10 @@ export default function FilmShoot () {
   }
 
   return (
-    <section className="bg-white pt-14">
-      <div className="pt-28 pb-2 text-center">
+    <section className="bg-white pt-6">
+      <div className="pt-16 pb-2 text-center">
         <h1 className="text-[142px] text-black max-sm:text-[40px] max-md:text-[100px]">
-          Film shoots
+          Film shoot
         </h1>
         <p className="m-auto max-w-6xl text-[#c0c0c7] text-2xl">
           Discover the films shot by Laxya Production, bringing stories to life with stunning visuals and expert craftsmanship.
