@@ -19,9 +19,14 @@ export default function About () {
       {/* About Us Content  */}
       <section>
         <div className="max-sm:px-[10px] max-md:px-[45px] py-[15px] pt-[15px] font-normal text-[#75757c] text-lg">
-          <p className="px-[120px] max-sm:px-2">
+          {/* <p className="px-[120px] max-sm:px-2">
 
             Welcome to Laxya Productions, a well-known production house based in Ghitorni, Delhi, famous for its creativity since 1995. With a history of over 27 years, we've become a leading name in advertising and fashion, consistently delivering impressive content that goes beyond expectations.
+          </p> */}
+          <p className="px-[120px] max-sm:px-2 text-center">
+
+            Meet Our Team – A passionate group of creative professionals dedicated to bringing visionary ideas to life at Laxya Productions.
+            {' '}
           </p>
           <br />
           <TeamSlider />
